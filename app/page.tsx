@@ -166,11 +166,11 @@ export default function Main() {
         </section>
 
         {/* ── Onward · contact ───────────────────────────────────────────── */}
-        <section id="contact" className="border-t border-ink/10 py-12 sm:py-16">
+        <section id="contact" className="border-t border-ink/10 py-12 sm:py-16 text-center">
           <h2 className="font-serif text-3xl font-semibold tracking-tight">
             Onward.
           </h2>
-          <p className="mt-4 max-w-xl leading-relaxed text-ink-soft">
+          <p className="mt-4 mx-auto max-w-xl leading-relaxed text-ink-soft">
             Every quest needs a starting point. Ours is usually an email.
           </p>
           <a
