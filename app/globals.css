@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ── Brand tokens (shared by all four templates) ─────────────────────────── */
+@theme {
+  --color-ink: #1c1813; /* warm near-black, like the logo's ink */
+  --color-ink-soft: #4a4338;
+  --color-paper: #f7f1e6; /* warm cream */
+  --color-paper-warm: #efe4d1;
+  --color-cream: #fbf7ef;
+  --color-gold: #e0a30c; /* the logo's golden script */
+  --color-gold-soft: #f0c64f;
+  --color-gold-deep: #b9701a; /* the orange shadow on the logo type */
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-hand: var(--font-caveat), ui-sans-serif, cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* ── Shared hand-drawn textures ──────────────────────────────────────────── */
+
+/* Faint paper grain — layered over warm backgrounds. */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Cross-hatch shading — the classic ink shadow texture from the logo. */
+.hatch {
+  background-image: repeating-linear-gradient(
+    45deg,
+    currentColor 0,
+    currentColor 1px,
+    transparent 1px,
+    transparent 6px
+  );
+}
+.hatch-dense {
+  background-image: repeating-linear-gradient(
+      45deg,
+      currentColor 0,
+      currentColor 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      currentColor 0,
+      currentColor 1px,
+      transparent 1px,
+      transparent 5px
+    );
+}
+
+/* Hard, offset "printed" shadow — reads as a hand-drawn drop shadow. */
+.ink-shadow {
+  box-shadow: 6px 6px 0 0 var(--color-ink);
+}
+.ink-shadow-gold {
+  box-shadow: 6px 6px 0 0 var(--color-gold-deep);
+}
+
+/* Underline drawn by hand, used across templates as a section marker. */
+.hand-underline {
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-gold), var(--color-gold));
+  background-position: 0 92%;
+  background-size: 100% 0.12em;
+  background-repeat: no-repeat;
+}
+
+/* Windmill sails turning on their own — used by several variants. */
+@keyframes sr-sail-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.sail-spin {
+  transform-box: view-box;
+  transform-origin: 32px 28px;
+  animation: sr-sail-spin 9s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .sail-spin {
+    animation: none;
+  }
+}
