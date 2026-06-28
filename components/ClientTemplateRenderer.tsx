@@ -97,12 +97,13 @@ export function ClientTemplateRenderer({ tv, lead }: Props) {
 
   const cssVars = buildCssVars(tv);
 
-  // Derive slot captions from filenames for templates that display them
-  const slotCaptions: Record<string, string> = {};
+  // Derive slot captions from filenames as fallback for templates that display them
+  const derivedCaptions: Record<string, string> = {};
   for (const [slotId, url] of Object.entries(tv.slots)) {
-    const filename = (url.split("/").pop() ?? "").replace(/\.[^.]+$/, "").replace(/[-_]/g, " ");
-    if (filename) slotCaptions[slotId] = filename;
+    const filename = decodeURIComponent(url.split("/").pop() ?? "").replace(/\.[^.]+$/, "").replace(/[-_]/g, " ");
+    if (filename) derivedCaptions[slotId] = filename;
   }
+  const slotCaptions = { ...derivedCaptions, ...tv.copy?.slotCaptions };
   const copy: TemplateCopy = { ...tv.copy, slotCaptions };
 
   return (
