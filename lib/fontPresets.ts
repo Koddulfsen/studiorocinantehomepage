@@ -35,6 +35,12 @@ export const FONT_PRESETS: FontPreset[] = [
   { id: "whimsy",    label: "Whimsy",    specimen: "Caveat / Crimson",          heading: "var(--font-caveat)",     body: "var(--font-crimson)" },
   { id: "tender",    label: "Tender",    specimen: "Cormorant / Nunito",        heading: "var(--font-cormorant)",  body: "var(--font-nunito)" },
   { id: "vogue",     label: "Vogue",     specimen: "Bodoni / Raleway",          heading: "var(--font-bodoni)",     body: "var(--font-raleway)" },
+  // ── New distinctive fonts ───────────────────────────────────────────────
+  { id: "milano",    label: "Milano",    specimen: "Italiana / Cormorant",      heading: "var(--font-italiana)",   body: "var(--font-cormorant)" },
+  { id: "feature",   label: "Feature",   specimen: "Instrument / Outfit",       heading: "var(--font-instrument)", body: "var(--font-outfit)" },
+  { id: "broadside", label: "Broadside", specimen: "Big Shoulders / Outfit",    heading: "var(--font-shoulders)",  body: "var(--font-outfit)" },
+  { id: "fresh",     label: "Fresh",     specimen: "Outfit / Outfit",           heading: "var(--font-outfit)",     body: "var(--font-outfit)" },
+  { id: "column",    label: "Column",    specimen: "Instrument / Space Grotesk",heading: "var(--font-instrument)", body: "var(--font-space-grotesk)" },
 ];
 
 // All CSS vars that templates use for heading/display fonts
@@ -42,6 +48,7 @@ export const HEADING_FONT_VARS = [
   "--font-cormorant", "--font-fraunces", "--font-bebas", "--font-playfair",
   "--font-caveat", "--font-dm-serif", "--font-bodoni", "--font-abril",
   "--font-garamond", "--font-syne", "--font-serif", "--font-display",
+  "--font-italiana", "--font-instrument", "--font-shoulders", "--font-outfit",
 ];
 
 // All CSS vars that templates use for body/ui fonts
@@ -49,7 +56,7 @@ export const BODY_FONT_VARS = [
   "--font-josefin", "--font-inter", "--font-jetbrains", "--font-lora",
   "--font-crimson", "--font-space-grotesk", "--font-raleway", "--font-nunito",
   "--font-baskerville", "--font-spectral", "--font-mono", "--font-body-serif",
-  "--font-sans",
+  "--font-sans", "--font-outfit", "--font-instrument",
 ];
 
 export const RADIUS_PRESETS = [

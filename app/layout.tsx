@@ -4,6 +4,7 @@ import {
   Cormorant_Garamond, Playfair_Display, Josefin_Sans, Crimson_Pro,
   DM_Serif_Display, Bodoni_Moda, Space_Grotesk, Syne, EB_Garamond,
   Raleway, Abril_Fatface, Libre_Baskerville, Nunito, Spectral,
+  Italiana, Instrument_Serif, Big_Shoulders, Outfit,
 } from "next/font/google";
 import "./globals.css";
 
@@ -27,6 +28,10 @@ const abrilFatface   = Abril_Fatface({  subsets: ["latin"], variable: "--font-ab
 const libreBaskerville = Libre_Baskerville({ subsets: ["latin"], variable: "--font-baskerville", display: "swap", weight: ["400","700"], style: ["normal","italic"] });
 const nunito         = Nunito({         subsets: ["latin"], variable: "--font-nunito",        display: "swap" });
 const spectral       = Spectral({       subsets: ["latin"], variable: "--font-spectral",      display: "swap", weight: ["400","700"], style: ["normal","italic"] });
+const italiana       = Italiana({       subsets: ["latin"], variable: "--font-italiana",      display: "swap", weight: "400" });
+const instrumentSerif = Instrument_Serif({ subsets: ["latin"], variable: "--font-instrument", display: "swap", weight: "400", style: ["normal","italic"] });
+const bigShoulders   = Big_Shoulders({ subsets: ["latin"], variable: "--font-shoulders", display: "swap", weight: ["400","500","600","700","800","900"] });
+const outfit         = Outfit({         subsets: ["latin"], variable: "--font-outfit",        display: "swap" });
 
 export const metadata: Metadata = {
   title: "Studio Rocinante — Websites, Tools & Custom Software",
@@ -52,6 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     inter, fraunces, jetbrains, caveat, bebasNeue, lora, cormorant,
     playfair, josefin, crimsonPro, dmSerifDisplay, bodoni, spaceGrotesk,
     syne, ebGaramond, raleway, abrilFatface, libreBaskerville, nunito, spectral,
+    italiana, instrumentSerif, bigShoulders, outfit,
   ].map((f) => f.variable).join(" ");
 
   return (
