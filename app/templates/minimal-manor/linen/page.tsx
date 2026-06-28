@@ -57,6 +57,8 @@ export default function Linen() {
         </div>
       </section>
 
+      <div className={styles.heroImageMobile} aria-hidden />
+
       <section className={styles.menu} id="menu">
         <span className={styles.menuLabel}>{copy.label ?? "Menu"}</span>
         {(copy.menuItems ?? DEFAULT_ITEMS).map((item) => (

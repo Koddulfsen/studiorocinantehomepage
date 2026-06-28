@@ -220,11 +220,23 @@
   margin: 0;
 }
 
+.heroImageMobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .nav { padding: 1.5rem 1.5rem; }
   .hero { grid-template-columns: 1fr; }
   .heroText { padding: 4rem 1.5rem; border-right: none; }
   .heroImage { display: none; }
+  .heroImageMobile {
+    display: block;
+    height: 60vw;
+    background-image: var(--slot-2, radial-gradient(ellipse 60% 70% at 50% 40%, #4a2808 0%, #1e0e04 50%, #070302 100%));
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(26,22,18,0.08);
+  }
   .split { grid-template-columns: 1fr; }
   .splitImage { min-height: 55vw; border-right: none; }
   .splitText { padding: 2.5rem 1.5rem; }
