@@ -3,13 +3,15 @@
     {
       "version": 1,
       "templateId": "story-market-grove",
-      "fontPreset": "neon",
+      "fontPreset": "modern",
       "radius": "pill",
       "accent": "#C4877A",
+      "titleSize": 6,
+      "titleWeight": 800,
       "slots": {
         "slot-1": "/clients/project-seoul/vibe.png",
         "slot-2": "/clients/project-seoul/icecream.png",
-        "slot-3": "/clients/project-seoul/menu.png",
+        "slot-3": "/clients/project-seoul/logo.png",
         "slot-4": "/clients/project-seoul/cashier.png"
       }
     },
@@ -36,13 +38,84 @@
       "fontPreset": "modern",
       "radius": "sharp",
       "accent": "#7f7371",
-      "titleSize": 50,
+      "titleSize": 7,
+      "titleWeight": 800,
       "titleTransform": "uppercase",
       "slots": {
         "slot-1": "/clients/project-seoul/vibe.png",
         "slot-2": "/clients/project-seoul/cashier.png",
         "slot-3": "/clients/project-seoul/facade.png",
         "slot-4": "/clients/project-seoul/icecream.png"
+      },
+      "copy": {
+        "tagline": "Seoul's café culture, at home in Toronto.",
+        "body": "Project Seoul is a modern Korean café built around the things we love — bingsu piled high, matcha pulled from ceremonial grade, and a room worth sitting in. Every item is made with intention, nothing is an afterthought.",
+        "cta": "Stop By",
+        "eyebrow": "KOREAN CAFÉ · TORONTO",
+        "label": "WHAT WE DO",
+        "label2": "WHAT'S GOOD",
+        "sections": [
+          {
+            "title": "Bingsu",
+            "body": "Shaved milk ice, lighter than you expect and loaded with toppings. Mango, strawberry, matcha, red bean — rotated with the season. Made to order every time."
+          },
+          {
+            "title": "Matcha & Coffee",
+            "body": "Ceremonial grade matcha served as a latte or straight over ice. Dalgona whipped to order, iced americano done simply. We take the drinks as seriously as the food."
+          },
+          {
+            "title": "Bites",
+            "body": "Croffles pressed golden on the iron, tteok soft and freshly made, sikhye chilled and sweet. Small things done well, the Seoul way."
+          }
+        ],
+        "menuItems": [
+          {
+            "name": "Bingsu",
+            "desc": "shaved milk ice, seasonal toppings",
+            "price": "$14"
+          },
+          {
+            "name": "Croffle",
+            "desc": "croissant waffle, honey butter",
+            "price": "$8"
+          },
+          {
+            "name": "Matcha Latte",
+            "desc": "ceremonial grade, oat or whole",
+            "price": "$7"
+          },
+          {
+            "name": "Iced Americano",
+            "desc": "double shot",
+            "price": "$5"
+          },
+          {
+            "name": "Dalgona Coffee",
+            "desc": "whipped, cold milk",
+            "price": "$7"
+          },
+          {
+            "name": "Tteok",
+            "desc": "soft rice cake, red bean or sesame",
+            "price": "$5"
+          },
+          {
+            "name": "Yuzu Lemonade",
+            "desc": "house-made, sparkling",
+            "price": "$6"
+          },
+          {
+            "name": "Sikhye",
+            "desc": "sweet rice punch, chilled",
+            "price": "$5"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "the room",
+          "slot-2": "at the pass",
+          "slot-3": "come find us",
+          "slot-4": "bingsu season"
+        }
       }
     },
     {
@@ -58,11 +131,12 @@
     {
       "version": 6,
       "templateId": "food-polaroid-contact",
-      "fontPreset": "ink",
+      "fontPreset": "modern",
       "radius": "sharp",
       "accent": "#C4877A",
-      "titleSize": 50,
-      "titleTransform": "none",
+      "titleSize": 6,
+      "titleWeight": 800,
+      "titleTransform": "uppercase",
       "slots": {
         "slot-1": "/clients/project-seoul/cashier.png",
         "slot-2": "/clients/project-seoul/facade.png",
@@ -147,19 +221,52 @@
         "label": "WHAT WE MAKE",
         "label2": "FROM OUR KITCHEN",
         "sections": [
-          { "title": "Bingsu", "body": "Shaved milk ice loaded with toppings. Mango, strawberry, matcha, red bean — rotated seasonally. Made to order, served fast." },
-          { "title": "Croffle", "body": "Croissant dough pressed in a waffle iron until golden and layered. Honey butter, cream cheese, or seasonal fruit. Straight off the iron." },
-          { "title": "Coffee & Drinks", "body": "Matcha from ceremonial grade, dalgona whipped to order, yuzu lemonade house-made daily. Korean favourites alongside your usual espresso." }
+          {
+            "title": "Bingsu",
+            "body": "Shaved milk ice loaded with toppings. Mango, strawberry, matcha, red bean — rotated seasonally. Made to order, served fast."
+          },
+          {
+            "title": "Croffle",
+            "body": "Croissant dough pressed in a waffle iron until golden and layered. Honey butter, cream cheese, or seasonal fruit. Straight off the iron."
+          },
+          {
+            "title": "Coffee & Drinks",
+            "body": "Matcha from ceremonial grade, dalgona whipped to order, yuzu lemonade house-made daily. Korean favourites alongside your usual espresso."
+          }
         ],
         "menuItems": [
-          { "name": "Bingsu", "price": "$14" },
-          { "name": "Croffle", "price": "$8" },
-          { "name": "Matcha Latte", "price": "$7" },
-          { "name": "Iced Americano", "price": "$5" },
-          { "name": "Dalgona Coffee", "price": "$7" },
-          { "name": "Tteok", "price": "$5" },
-          { "name": "Yuzu Lemonade", "price": "$6" },
-          { "name": "Sikhye", "price": "$5" }
+          {
+            "name": "Bingsu",
+            "price": "$14"
+          },
+          {
+            "name": "Croffle",
+            "price": "$8"
+          },
+          {
+            "name": "Matcha Latte",
+            "price": "$7"
+          },
+          {
+            "name": "Iced Americano",
+            "price": "$5"
+          },
+          {
+            "name": "Dalgona Coffee",
+            "price": "$7"
+          },
+          {
+            "name": "Tteok",
+            "price": "$5"
+          },
+          {
+            "name": "Yuzu Lemonade",
+            "price": "$6"
+          },
+          {
+            "name": "Sikhye",
+            "price": "$5"
+          }
         ],
         "slotCaptions": {
           "slot-1": "the room",
