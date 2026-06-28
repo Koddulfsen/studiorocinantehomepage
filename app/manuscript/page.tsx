@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import { WorkCardStack } from "@/components/WorkCardStack";
 import {
   studio,
   services,
@@ -263,30 +263,9 @@ export default function Manuscript() {
             </div>
 
             <ul className="mt-14 grid gap-8 md:grid-cols-3">
-              {work.map((w, i) => {
-                const plate: CSSProperties = {
-                  background:
-                    i % 2 === 0
-                      ? "linear-gradient(135deg,#f6e3b8,#e0a30c)"
-                      : "linear-gradient(135deg,#efe4d1,#b9701a)",
-                };
-                return (
+              {work.map((w) => (
                   <li key={w.title} className={`${styles.folio} group`}>
-                    {/* Illuminated plate — gilt miniature standing in for a screenshot */}
-                    <figure className="relative aspect-[4/3] overflow-hidden rounded-xl border border-ink/15 bg-paper-warm">
-                      <div className="absolute inset-0" style={plate} aria-hidden />
-                      <div
-                        className="hatch absolute inset-0 text-ink/15"
-                        aria-hidden
-                      />
-                      <SketchFrame className="text-ink/40" radius={10} />
-                      <div className="absolute inset-0 grid place-items-center text-ink/55 transition-transform duration-500 group-hover:scale-110">
-                        <Windmill size={84} />
-                      </div>
-                      <figcaption className="absolute left-3 top-3 rounded-full bg-ink/80 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-paper">
-                        {w.tag}
-                      </figcaption>
-                    </figure>
+                    <WorkCardStack images={w.images} title={w.title} fit={w.imageFit} />
                     <div className="mt-4">
                       <p className="font-mono text-[11px] uppercase tracking-widest text-gold-deep">
                         {w.category}
@@ -302,8 +281,7 @@ export default function Manuscript() {
                       </p>
                     </div>
                   </li>
-                );
-              })}
+              ))}
             </ul>
           </div>
         </section>

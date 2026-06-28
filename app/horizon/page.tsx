@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import Link from "next/link";
+import { WorkCardStack } from "@/components/WorkCardStack";
 import {
   studio,
   services,
@@ -245,25 +246,9 @@ export default function Horizon() {
             </div>
 
             <ul className="mt-16 grid gap-x-10 gap-y-14 md:grid-cols-3">
-              {work.map((w, i) => {
-                const tints: string[] = [
-                  "linear-gradient(150deg,#f4ecdd,#e0a30c)",
-                  "linear-gradient(150deg,#e7e4dc,#8a8478)",
-                  "linear-gradient(150deg,#f0e6d4,#b9701a)",
-                ];
-                return (
+              {work.map((w) => (
                   <li key={w.title} className={`${styles.rise} group`}>
-                    {/* CSS-only placeholder visual — no external images */}
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-ink/12">
-                      <div className="absolute inset-0" style={{ background: tints[i] }} />
-                      <div className="hatch absolute inset-0 text-ink/15" aria-hidden />
-                      <div className="absolute inset-0 grid place-items-center text-ink/45 transition-transform duration-700 group-hover:scale-105">
-                        <Windmill size={76} />
-                      </div>
-                      <span className="absolute left-3 top-3 rounded-full bg-paper/85 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-ink">
-                        {w.tag}
-                      </span>
-                    </div>
+                    <WorkCardStack images={w.images} title={w.title} fit={w.imageFit} />
                     <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.25em] text-gold-deep">
                       {w.category}
                     </p>
@@ -272,8 +257,7 @@ export default function Horizon() {
                     </h3>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{w.blurb}</p>
                   </li>
-                );
-              })}
+              ))}
             </ul>
           </div>
         </section>

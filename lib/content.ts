@@ -54,28 +54,52 @@ export type Work = {
   title: string;
   category: string;
   blurb: string;
-  image: string;
+  images: string[];
   tag?: string;
+  imageFit?: "cover" | "contain";
 };
 
 export const work: Work[] = [
   {
     title: "Mama's Guesthouse Cafe",
     category: "Web Design & Development",
-    blurb: "Landing page for a high vibrational, humble cafe and guesthouse on Langkawi, Malaysia.",
-    image: "/projects/mamasguesthousecafe/hero.png",
+    blurb: "Humble guesthouse and cafe on Langkawi, Malaysia.",
+    images: [
+      "/projects/mamasguesthousecafe/cafe.png",
+      "/projects/mamasguesthousecafe/full page.png",
+      "/projects/mamasguesthousecafe/activites.png",
+    ],
+  },
+  {
+    title: "Homestay Pulau Tuba",
+    category: "Web Design & Development",
+    blurb: "A quiet island homestay group initiative. Website is designed for people to get a feel for the island before they arrive.",
+    imageFit: "contain",
+    images: [
+      "/projects/homestaypulautuba/hero.png",
+      "/projects/homestaypulautuba/acommodation.png",
+      "/projects/homestaypulautuba/community.png",
+      "/projects/homestaypulautuba/activities.png",
+    ],
   },
   {
     title: "Nutri",
     category: "Custom Software · AI",
     blurb: "A nutritional calculator powered by an intuitive AI chat to log foods.",
-    image: "/projects/nutri/full-screen.png",
+    images: [
+      "/projects/nutri/full-screen.png",
+      "/projects/nutri/analysis.png",
+      "/projects/nutri/search-macros.png",
+    ],
   },
   {
     title: "Trade Deck",
     category: "Custom Software · Data Processing",
     blurb: "Backtesting tool for custom strategies, ranking them through a multidimensional metric system.",
-    image: "/projects/tradedeck/backtestingdashboard.png",
+    images: [
+      "/projects/tradedeck/backtestingdashboard.png",
+      "/projects/tradedeck/botdashboard.png",
+    ],
   },
 ];
 
