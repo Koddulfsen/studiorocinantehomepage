@@ -135,7 +135,6 @@ export const process: Step[] = [
 export const promises: string[] = [
   "Honest, fixed pricing",
   "You own everything",
-  "Built to last",
 ];
 
 // The brand story — the windmill on the logo, the Quixote namesake.
