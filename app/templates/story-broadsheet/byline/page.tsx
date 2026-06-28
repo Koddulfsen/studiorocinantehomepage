@@ -39,7 +39,7 @@ export default function Byline() {
             {copy.body ?? "Chef Daniel Chartier grew up fishing with his father in northern Ontario. The menu at North is his attempt to cook that landscape — wild, seasonal, and honest about where it comes from."}
           </p>
           <span className={styles.openingByline}>
-            Chef · Daniel Chartier · Ossington Ave, Toronto
+            {copy.eyebrow ?? "Modern Canadian · Ossington · Toronto"}
           </span>
         </div>
       </section>
@@ -52,13 +52,10 @@ export default function Byline() {
             {copy.sections?.[0]?.title ?? "Canadian ingredients. No apology for the winter."}
           </h2>
           <p className={styles.spreadPara}>
-            The menu at North changes every six weeks, built around what Chartier can
-            source from the farms and waters he&apos;s worked with for years. Bison from
-            Manitoba. Lake trout from Georgian Bay. Mushrooms foraged an hour north of the city.
+            {copy.sections?.[1]?.body ?? "The menu changes every six weeks, built around what can be sourced from the farms and waters nearby. Seasonal, honest, and rooted in place."}
           </p>
           <p className={styles.spreadPara}>
-            &ldquo;Canadian cuisine doesn&apos;t have a fixed identity yet,&rdquo; he says. &ldquo;That&apos;s the
-            interesting part. We get to figure out what it is.&rdquo;
+            {copy.sections?.[2]?.body ?? ""}
           </p>
         </div>
       </section>
@@ -66,7 +63,7 @@ export default function Byline() {
       <section className={styles.menu} id="menu">
         <div className={styles.menuLeft}>
           <h2 className={styles.menuTitle}>{copy.label2 ?? "Current menu"}</h2>
-          <span className={styles.menuSub}>Changes seasonally</span>
+          <span className={styles.menuSub}>{copy.sections?.[0]?.body ?? "Changes seasonally"}</span>
           <div className={styles.menuImage} />
         </div>
         <div className={styles.menuRight}>

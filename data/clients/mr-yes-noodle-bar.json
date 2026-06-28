@@ -7,6 +7,212 @@
       "radius": "sharp",
       "accent": "#C4877A",
       "slots": {}
+    },
+    {
+      "version": 2,
+      "templateId": "bold-neon-volt",
+      "fontPreset": "ink",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 53,
+      "titleWeight": 400,
+      "titleTransform": "none",
+      "slots": {}
+    },
+    {
+      "version": 3,
+      "templateId": "bold-neon-clash",
+      "fontPreset": "novel",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 6,
+      "titleTransform": "none",
+      "slots": {}
+    },
+    {
+      "version": 4,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "classic",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 7,
+      "titleWeight": 600,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mr-yes-noodle-bar/seating.png"
+      }
+    },
+    {
+      "version": 5,
+      "templateId": "atmosphere-corner-block",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {}
+    },
+    {
+      "version": 6,
+      "templateId": "atmosphere-corner-warmth",
+      "fontPreset": "warmth",
+      "radius": "sharp",
+      "accent": "#f9e062",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mr-yes-noodle-bar/dinner.png",
+        "slot-2": "/clients/mr-yes-noodle-bar/seating.png"
+      }
+    },
+    {
+      "version": 7,
+      "templateId": "food-polaroid-contact",
+      "fontPreset": "dispatch",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 3,
+      "titleWeight": 300,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mr-yes-noodle-bar/dinner.png",
+        "slot-2": "/clients/mr-yes-noodle-bar/meatball%20skewers.png",
+        "slot-3": "/clients/mr-yes-noodle-bar/shrimp%20tempura.png",
+        "slot-4": "/clients/mr-yes-noodle-bar/wok%20dish.png"
+      },
+      "copy": {
+        "tagline": "Noodles, skewers, wok smoke. Downtown simple.",
+        "body": "Mr. Yes is a downtown noodle bar that keeps it honest — a tight menu, a simple room, and food that tastes like someone actually cooked it. The kind of place you come back to twice a week without thinking about it.",
+        "cta": "Come Eat",
+        "eyebrow": "NOODLE BAR · TORONTO",
+        "label": "WHAT WE MAKE",
+        "label2": "THE MENU",
+        "sections": [
+          {
+            "title": "Noodles",
+            "body": "The main event. Broths built over hours, noodles pulled to order. Rich, clean, and exactly what you want after a long day downtown."
+          },
+          {
+            "title": "Skewers & Bites",
+            "body": "Meatball skewers, shrimp tempura, small plates meant for sharing or not. Everything comes out hot and ready to eat. No fuss."
+          },
+          {
+            "title": "Wok Dishes",
+            "body": "High-heat wok cooking done properly — charred edges, good sauce, and rice that doesn't disappoint. The dish that anchors the meal."
+          }
+        ],
+        "menuItems": [
+          {
+            "name": "Ramen",
+            "desc": "pork broth, soft egg, nori",
+            "price": "$17"
+          },
+          {
+            "name": "Wok Noodles",
+            "desc": "wok-fried, your choice of protein",
+            "price": "$16"
+          },
+          {
+            "name": "Meatball Skewers",
+            "desc": "three per order, house sauce",
+            "price": "$9"
+          },
+          {
+            "name": "Shrimp Tempura",
+            "desc": "light batter, dipping sauce",
+            "price": "$12"
+          },
+          {
+            "name": "Wok Dish",
+            "desc": "seasonal veg, wok sauce, rice",
+            "price": "$15"
+          },
+          {
+            "name": "Gyoza",
+            "desc": "pan-fried, six per order",
+            "price": "$9"
+          },
+          {
+            "name": "Steamed Rice",
+            "price": "$3"
+          },
+          {
+            "name": "Jasmine Tea",
+            "price": "$3"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "dinner at mr. yes",
+          "slot-2": "meatball skewers",
+          "slot-3": "shrimp tempura",
+          "slot-4": "off the wok"
+        }
+      }
+    },
+    {
+      "version": 8,
+      "templateId": "story-broadsheet-ledger",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mr-yes-noodle-bar/dinner.png"
+      }
+    },
+    {
+      "version": 9,
+      "templateId": "minimal-manor-linen",
+      "fontPreset": "luxury",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 0,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mr-yes-noodle-bar/meatball%20skewers.png",
+        "slot-2": "/clients/mr-yes-noodle-bar/wok%20dish.png"
+      }
+    },
+    {
+      "version": 10,
+      "templateId": "story-broadsheet-byline",
+      "fontPreset": "vogue",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 11,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mr-yes-noodle-bar/facade.png",
+        "slot-2": "/clients/mr-yes-noodle-bar/dinner.png"
+      },
+      "copy": {
+        "tagline": "A noodle bar that gets out of your way.",
+        "body": "Mr. Yes is a downtown spot that keeps things simple — a short menu, a straightforward room, and food cooked with genuine care. No theatre, no fuss. Just good noodles and a seat when you need one.",
+        "cta": "Come In",
+        "eyebrow": "NOODLE BAR · TORONTO",
+        "label": "THE FOOD",
+        "label2": "THE MENU",
+        "sections": [
+          { "title": "Good noodles. No noise.", "body": "Rotating menu" },
+          { "body": "The menu at Mr. Yes is short on purpose. Broths built from scratch, skewers pulled from the grill, wok dishes done with real heat. Everything cooked to order, nothing sitting around." },
+          { "body": "It's a simple room downtown and that's exactly the point. You come for the food, you get a good meal, you leave happy. That's the whole idea." }
+        ],
+        "menuItems": [
+          { "name": "Ramen", "desc": "pork broth, soft egg, nori", "price": "$17" },
+          { "name": "Wok Noodles", "desc": "wok-fried, choice of protein", "price": "$16" },
+          { "name": "Wok Dish", "desc": "seasonal veg, wok sauce, rice", "price": "$15" },
+          { "name": "Meatball Skewers", "desc": "three per order, house sauce", "price": "$9" },
+          { "name": "Shrimp Tempura", "desc": "light batter, dipping sauce", "price": "$12" },
+          { "name": "Gyoza", "desc": "pan-fried, six per order", "price": "$9" },
+          { "name": "Steamed Rice", "price": "$3" },
+          { "name": "Jasmine Tea", "price": "$3" }
+        ],
+        "slotCaptions": {
+          "slot-1": "find us here",
+          "slot-2": "dinner at mr. yes"
+        }
+      }
     }
   ]
 }
