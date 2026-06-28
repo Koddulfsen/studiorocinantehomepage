@@ -40,8 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# leads data — large Google Maps scrape, stays local
+# local-only — dashboard, API routes, scrape data, scripts
 /leads/
-
-# claude scratchpad
+/app/dashboard/
+/app/api/
+/scripts/
 .claude/
