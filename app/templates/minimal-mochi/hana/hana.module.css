@@ -73,7 +73,7 @@
   font-family: var(--font-primary, var(--font-cormorant));
   text-transform: var(--hero-title-transform, none);
   font-size: var(--hero-title-size, clamp(5rem, 14vw, 12rem));
-  font-weight: 300;
+  font-weight: var(--hero-title-weight, 300);
   line-height: 0.9;
   letter-spacing: -0.01em;
   margin: 0 0 1rem;

@@ -60,7 +60,7 @@
   font-family: var(--font-josefin);
   text-transform: var(--hero-title-transform, none);
   font-size: var(--hero-title-size, clamp(4rem, 12vw, 10rem));
-  font-weight: 100;
+  font-weight: var(--hero-title-weight, 100);
   letter-spacing: 0.15em;
   line-height: 0.9;
   text-transform: uppercase;

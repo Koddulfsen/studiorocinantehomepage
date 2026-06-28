@@ -8,6 +8,7 @@ export interface TemplateVersion {
   radius: RadiusPreset;
   accent: string;
   titleSize: number;
+  titleWeight?: number;
   titleTransform: "none" | "uppercase" | "lowercase";
   slots: Record<string, string>;
   copy?: TemplateCopy;

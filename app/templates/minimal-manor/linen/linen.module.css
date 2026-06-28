@@ -68,7 +68,7 @@
   font-family: var(--font-serif);
   text-transform: var(--hero-title-transform, none);
   font-size: var(--hero-title-size, clamp(4rem, 10vw, 9rem));
-  font-weight: 300;
+  font-weight: var(--hero-title-weight, 300);
   line-height: 0.9;
   letter-spacing: -0.02em;
   margin: 0 0 2.5rem;

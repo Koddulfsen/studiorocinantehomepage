@@ -60,7 +60,7 @@
   font-family: var(--font-serif);
   text-transform: var(--hero-title-transform, none);
   font-size: var(--hero-title-size, clamp(2rem, 4vw, 3.25rem));
-  font-weight: 700;
+  font-weight: var(--hero-title-weight, 700);
   line-height: 1.1;
   margin: 0 0 1.25rem;
 }

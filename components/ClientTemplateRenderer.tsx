@@ -74,6 +74,7 @@ function buildCssVars(tv: TemplateVersion): Record<string, string> {
     vars["--hero-title-size"] = `${rem}rem`;
   }
 
+  if (tv.titleWeight) vars["--hero-title-weight"] = String(tv.titleWeight);
   if (tv.titleTransform) vars["--hero-title-transform"] = tv.titleTransform;
 
   return vars;
