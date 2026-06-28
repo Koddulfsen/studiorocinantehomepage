@@ -86,7 +86,7 @@
   font-family: var(--font-cormorant);
   text-transform: var(--hero-title-transform, none);
   font-size: var(--hero-title-size, clamp(3rem, 6vw, 5rem));
-  font-weight: 300;
+  font-weight: var(--hero-title-weight, 300);
   line-height: 0.95;
   margin: 0;
 }
@@ -183,9 +183,8 @@
 }
 
 @media (max-width: 768px) {
-  .filmStrip { gap: 0.35rem; padding: 2rem 1.5rem; }
-  .frame { width: calc(50% - 0.175rem); }
-  .frame:nth-child(n+3) { display: none; }
+  .filmStrip { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem; padding: 1.5rem; }
+  .frame { width: 100%; }
   .hero { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1.5rem; }
   .menu { padding: 2.5rem 1.5rem; }
   .nav { padding: 1.25rem 1.5rem; }
