@@ -36,6 +36,142 @@
         "slot-1": "/clients/agenda-cafe-bar/homemade ice cream sandwich.png",
         "slot-2": "/clients/agenda-cafe-bar/indoor seating plants.png"
       }
+    },
+    {
+      "version": 4,
+      "templateId": "story-market-pantry",
+      "fontPreset": "neon",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 8,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/agenda-cafe-bar/social%20vibes.png",
+        "slot-2": "/clients/agenda-cafe-bar/homemade%20ice%20cream%20sandwich.png",
+        "slot-3": "/clients/agenda-cafe-bar/mexican%20coke.png",
+        "slot-4": "/clients/agenda-cafe-bar/vibes%20outdoor%20seating.png"
+      },
+      "copy": {
+        "tagline": "Ice cream sandwiches, cold drinks, no rush.",
+        "body": "Agenda is a café and bar with outdoor seating, homemade ice cream sandwiches, and a fridge full of Mexican Coke. Come with people or alone. Stay as long as you want.",
+        "cta": "Come Hang",
+        "eyebrow": "CAFÉ · BAR · TORONTO",
+        "label": "WHAT WE DO",
+        "label2": "WHAT'S GOOD",
+        "sections": [
+          {
+            "title": "Ice Cream Sandwiches",
+            "body": "Made in-house, rotating flavours. Soft cookies, real ice cream, the kind of thing you didn't know you needed until you're halfway through it. Best eaten outside."
+          },
+          {
+            "title": "Coffee & Drinks",
+            "body": "Espresso done properly, Mexican Coke from the bottle, and a short bar menu when the day calls for it. Nothing overly complicated. Just good stuff to drink."
+          },
+          {
+            "title": "Food",
+            "body": "A short food menu built for the vibe — snacks and plates worth ordering, not an afterthought. Changes with what's good. Ask what's on."
+          }
+        ],
+        "menuItems": [
+          {
+            "name": "Ice Cream Sandwich",
+            "desc": "house-made, rotating flavour",
+            "price": "$7"
+          },
+          {
+            "name": "Espresso",
+            "price": "$4"
+          },
+          {
+            "name": "Latte",
+            "desc": "oat or whole",
+            "price": "$6"
+          },
+          {
+            "name": "Mexican Coke",
+            "desc": "glass bottle",
+            "price": "$4"
+          },
+          {
+            "name": "Iced Americano",
+            "price": "$5"
+          },
+          {
+            "name": "Seasonal Snack",
+            "desc": "ask us what's on",
+            "price": "$9"
+          },
+          {
+            "name": "Natural Wine",
+            "desc": "glass, rotating",
+            "price": "$12"
+          },
+          {
+            "name": "Local Beer",
+            "desc": "can or draft",
+            "price": "$8"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "the crowd",
+          "slot-2": "house-made",
+          "slot-3": "from the bottle",
+          "slot-4": "sit outside"
+        }
+      }
+    },
+    {
+      "version": 5,
+      "templateId": "food-polaroid-roll",
+      "fontPreset": "whimsy",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/agenda-cafe-bar/vibes%20outdoor%20seating.png",
+        "slot-2": "/clients/agenda-cafe-bar/mexican%20coke.png",
+        "slot-3": "/clients/agenda-cafe-bar/indoor%20seating%20plants.png",
+        "slot-4": "/clients/agenda-cafe-bar/homemade%20ice%20cream%20sandwich.png"
+      },
+      "copy": {
+        "tagline": "Patio. Cold Coke. Homemade ice cream sandwich.",
+        "body": "Agenda is a café with a proper patio, house-made ice cream sandwiches, and Mexican Coke from the bottle. Good coffee, good company, no rush.",
+        "cta": "Come Hang",
+        "eyebrow": "CAFÉ · BAR · TORONTO",
+        "label": "WHAT WE MAKE",
+        "label2": "THE MENU",
+        "sections": [
+          {
+            "title": "Ice Cream Sandwiches",
+            "body": "Made in-house daily, rotating flavours. Soft cookies, real ice cream. The thing people order twice."
+          },
+          {
+            "title": "Coffee & Drinks",
+            "body": "Espresso, lattes, iced americano. Mexican Coke from the glass bottle. Bar menu when the day calls for it."
+          },
+          {
+            "title": "The Patio",
+            "body": "Outdoor seating with plants and people. A spot to sit, stay longer than planned, and not feel rushed about it."
+          }
+        ],
+        "menuItems": [
+          { "name": "Ice Cream Sandwich", "desc": "house-made, rotating", "price": "$7" },
+          { "name": "Espresso", "price": "$4" },
+          { "name": "Latte", "desc": "oat or whole", "price": "$6" },
+          { "name": "Iced Americano", "price": "$5" },
+          { "name": "Mexican Coke", "desc": "glass bottle", "price": "$4" },
+          { "name": "Natural Wine", "desc": "glass, rotating", "price": "$12" },
+          { "name": "Local Beer", "desc": "can or draft", "price": "$8" },
+          { "name": "Seasonal Snack", "desc": "ask us", "price": "$9" }
+        ],
+        "slotCaptions": {
+          "slot-1": "out front",
+          "slot-2": "cold from the bottle",
+          "slot-3": "inside",
+          "slot-4": "house-made"
+        }
+      }
     }
   ]
 }
