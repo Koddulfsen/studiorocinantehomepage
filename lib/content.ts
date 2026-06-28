@@ -55,6 +55,7 @@ export type Work = {
   category: string;
   blurb: string;
   image: string;
+  tag?: string;
 };
 
 export const work: Work[] = [
