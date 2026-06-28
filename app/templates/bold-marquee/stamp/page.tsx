@@ -35,7 +35,7 @@ export default function Stamp() {
             <span className={styles.stampTop}>{copy.eyebrow ?? "Little Portugal · Toronto · Est. 2020"}</span>
             <h1 className={styles.stampName}>{name}</h1>
             <div className={styles.stampDivider}>
-              <span className={styles.stampDividerText}>French Pastry · Coffee · Daily Bakes</span>
+              <span className={styles.stampDividerText}>{copy.label2 ?? "Pastry · Coffee"}</span>
             </div>
             <p className={styles.stampTagline}>
               {copy.tagline ?? "Everything baked on the premises. Nothing from a box, ever."}

@@ -94,8 +94,8 @@
   font-size: 0.5rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  white-space: nowrap;
   opacity: 0.5;
+  text-align: center;
 }
 .stampTagline {
   font-family: var(--font-serif);
