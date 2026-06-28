@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { WorkCardStack } from "@/components/WorkCardStack";
 import {
   studio,
   services,
@@ -117,15 +118,9 @@ export default function Main() {
                 key={w.title}
                 className={`flex flex-col gap-8 sm:flex-row sm:items-center sm:gap-12 ${i % 2 === 1 ? "sm:flex-row-reverse" : ""}`}
               >
-                {/* image */}
+                {/* image stack */}
                 <div className="sm:w-3/5">
-                  <Image
-                    src={w.image}
-                    alt={w.title}
-                    width={1200}
-                    height={800}
-                    className="w-full rounded-lg object-cover shadow-md"
-                  />
+                  <WorkCardStack images={w.images} title={w.title} fit={w.imageFit} />
                 </div>
                 {/* text */}
                 <div className="sm:w-2/5">
