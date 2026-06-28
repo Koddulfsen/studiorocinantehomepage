@@ -1,0 +1,28 @@
+{
+  "templates": [
+    {
+      "version": 1,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {}
+    },
+    {
+      "version": 2,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/shy-coffee-co/matcha.png",
+        "slot-2": "/clients/shy-coffee-co/entrance.png",
+        "slot-3": "/clients/shy-coffee-co/entrance.png"
+      }
+    }
+  ]
+}

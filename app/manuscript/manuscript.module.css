@@ -1,0 +1,200 @@
+/* The Manuscript — an illuminated storybook.
+   Motion is progressive enhancement: where view-timeline isn't supported,
+   folios are simply visible. prefers-reduced-motion disables all animation. */
+
+.page {
+  position: relative;
+  overflow-x: clip;
+}
+
+/* ── Illuminated drop-cap (rubricated initial) ───────────────────────────── */
+/* Applied to the first <p> of a folio's body via `::first-letter`. */
+.dropcap::first-letter {
+  float: left;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 4.6rem;
+  line-height: 0.74;
+  padding: 0.32rem 0.6rem 0 0;
+  margin: 0.06em 0.04em 0 0;
+  color: var(--color-gold-deep);
+  text-shadow: 1px 1px 0 rgba(224, 163, 12, 0.35);
+}
+/* On the dark night folio, the initial glows like candlelight. */
+.dropcapNight::first-letter {
+  color: var(--color-gold-soft);
+  text-shadow: 0 0 14px rgba(240, 198, 79, 0.45);
+}
+
+/* ── Ruled writing lines (faint, like manuscript guide-rules) ────────────── */
+.ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.85rem,
+    rgba(74, 67, 56, 0.12) 1.85rem 1.9rem
+  );
+}
+.ruledNight {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.85rem,
+    rgba(240, 198, 79, 0.1) 1.85rem 1.9rem
+  );
+}
+
+/* ── Gold-leaf flourish rule ─────────────────────────────────────────────── */
+.goldRule {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold) 18%,
+    var(--color-gold-soft) 50%,
+    var(--color-gold) 82%,
+    transparent
+  );
+}
+
+/* ── Two-column manuscript text flow (where it fits) ─────────────────────── */
+.columns {
+  column-count: 1;
+}
+@media (min-width: 768px) {
+  .columns {
+    column-count: 2;
+    column-gap: 2.75rem;
+    column-rule: 1px solid rgba(74, 67, 56, 0.14);
+  }
+  .columnsNight {
+    column-rule: 1px solid rgba(240, 198, 79, 0.16);
+  }
+}
+
+/* ── Ink draw-in / fade-up reveal of each folio block ────────────────────── */
+.folio {
+  opacity: 1;
+}
+@supports (animation-timeline: view()) {
+  .folio {
+    opacity: 0;
+    animation: srInk linear both;
+    animation-timeline: view();
+    animation-range: entry 2% cover 22%;
+  }
+}
+@keyframes srInk {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+
+/* Marginalia drift in a touch later, as if added after the fact. */
+.margin {
+  opacity: 1;
+}
+@supports (animation-timeline: view()) {
+  .margin {
+    opacity: 0;
+    animation: srNote linear both;
+    animation-timeline: view();
+    animation-range: entry 6% cover 30%;
+  }
+}
+@keyframes srNote {
+  from {
+    opacity: 0;
+    transform: translateY(14px) rotate(-3deg);
+  }
+  to {
+    opacity: 0.95;
+    transform: rotate(-3deg);
+  }
+}
+
+/* ── Candle glow that breathes on the night folio ────────────────────────── */
+.candle {
+  animation: srFlicker 5.5s ease-in-out infinite;
+}
+@keyframes srFlicker {
+  0%,
+  100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+  70% {
+    opacity: 0.82;
+    transform: scale(0.98);
+  }
+}
+
+/* ── Gold shimmer sweeping across the final chapter ──────────────────────── */
+.shimmer {
+  position: relative;
+  background: linear-gradient(
+    100deg,
+    var(--color-gold-deep) 0%,
+    var(--color-gold-deep) 38%,
+    var(--color-gold-soft) 50%,
+    var(--color-gold-deep) 62%,
+    var(--color-gold-deep) 100%
+  );
+  background-size: 280% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: srShimmer 6s ease-in-out infinite;
+}
+@keyframes srShimmer {
+  0% {
+    background-position: 130% 0;
+  }
+  100% {
+    background-position: -30% 0;
+  }
+}
+
+/* Slow radiant halo behind the summit windmill. */
+.halo {
+  background: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(240, 198, 79, 0.2) 0deg 4deg,
+    transparent 4deg 14deg
+  );
+  -webkit-mask-image: radial-gradient(circle, black, transparent 65%);
+  mask-image: radial-gradient(circle, black, transparent 65%);
+  animation: srSpin 140s linear infinite;
+}
+@keyframes srSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .folio,
+  .margin {
+    opacity: 1;
+    animation: none;
+    transform: none;
+    filter: none;
+  }
+  .candle,
+  .shimmer,
+  .halo {
+    animation: none;
+  }
+  .shimmer {
+    color: var(--color-gold-deep);
+  }
+}

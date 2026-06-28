@@ -1,0 +1,195 @@
+/* Paper — Off-white, hairline rules, absolute minimum. Omakase energy. */
+
+.page {
+  background: #F7F4EE;
+  color: #111008;
+  overflow-x: clip;
+}
+
+.nav {
+  padding: 1.75rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navName {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(17,16,8,0.45);
+}
+.navCta {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(17,16,8,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navCta:hover { color: #111008; }
+
+.rule { height: 1px; background: rgba(17,16,8,0.1); margin: 0 4rem; }
+
+.hero {
+  padding: 8rem 4rem 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: calc(100svh - 57px);
+  justify-content: center;
+}
+.heroSmall {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(17,16,8,0.25);
+  margin-bottom: 2rem;
+  display: block;
+}
+.heroName {
+  font-family: var(--font-serif);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(4.5rem, 12vw, 10rem));
+  font-weight: 300;
+  line-height: 0.88;
+  letter-spacing: -0.025em;
+  margin: 0 0 3rem;
+}
+.heroSub {
+  font-family: var(--font-serif);
+  font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.65;
+  color: rgba(17,16,8,0.4);
+  max-width: 40ch;
+  margin: 0;
+}
+
+.imageRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1px;
+  background: rgba(17,16,8,0.1);
+  margin: 0;
+}
+.imageMain {
+  background-image: var(--slot-1, radial-gradient(ellipse 60% 60% at 50% 45%, #4a2808 0%, #1e0e04 50%, #060302 100%));
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+}
+.imageSide {
+  background-image: var(--slot-2, radial-gradient(ellipse 60% 60% at 50% 50%, #2a1808 0%, #100804 50%, #040202 100%));
+  background-size: cover;
+  background-position: center;
+}
+
+.about {
+  padding: 5rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: start;
+}
+.aboutLabel {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(17,16,8,0.25);
+  padding-top: 0.25rem;
+}
+.aboutText {}
+.aboutHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+}
+.aboutBody {
+  font-size: 0.9375rem;
+  color: rgba(17,16,8,0.45);
+  line-height: 1.9;
+  max-width: 52ch;
+  margin: 0;
+}
+
+.menu {
+  padding: 0 4rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: start;
+}
+.menuLabel {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(17,16,8,0.25);
+  padding-top: 0.25rem;
+}
+.menuList {}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(17,16,8,0.07);
+  gap: 1rem;
+}
+.menuItemName {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+.menuItemPrice {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: rgba(17,16,8,0.3);
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+}
+
+.footer {
+  padding: 3rem 4rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.footerName {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(17,16,8,0.3);
+}
+.footerDetails {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(17,16,8,0.25);
+  text-align: right;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.25rem 1.5rem; }
+  .rule { margin: 0 1.5rem; }
+  .hero { padding: 4rem 1.5rem; }
+  .imageRow { grid-template-columns: 1fr; }
+  .imageSide { display: none; }
+  .about { grid-template-columns: 1fr; gap: 1.5rem; padding: 3rem 1.5rem; }
+  .menu { grid-template-columns: 1fr; gap: 1.5rem; padding: 0 1.5rem 3rem; }
+  .footer { padding: 2rem 1.5rem; }
+  .footerDetails { text-align: left; }
+}

@@ -1,0 +1,14 @@
+{
+  "templates": [
+    {
+      "version": 1,
+      "templateId": "bold-marquee-signal",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {}
+    }
+  ]
+}

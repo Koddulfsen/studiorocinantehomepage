@@ -1,0 +1,113 @@
+/* The Woodcut — pen-and-ink engraving broadside.
+   Signature motion: "ink draw-on" — decorative SVG strokes draw themselves
+   in via stroke-dashoffset on scroll (CSS view-timeline). All motion is
+   progressive enhancement: without view-timeline support the strokes are
+   simply visible (dashoffset 0), and cards still have their hover states. */
+
+.page {
+  position: relative;
+  overflow-x: clip;
+}
+
+/* ── Ink draw-on for decorative SVG strokes ──────────────────────────────────
+   Apply to an <svg> whose visible path(s) should draw themselves in. We use a
+   generous dash length that covers any of the kit's small decorative paths. */
+.draw :global(path) {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 0; /* fallback: fully drawn */
+}
+
+@supports (animation-timeline: view()) {
+  .draw :global(path) {
+    stroke-dashoffset: 1200;
+    animation: srInkDraw linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 38%;
+  }
+}
+@keyframes srInkDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ── Block reveal — a stamped print pressing onto the page ───────────────── */
+.reveal {
+  opacity: 1;
+}
+@supports (animation-timeline: view()) {
+  .reveal {
+    opacity: 0;
+    animation: srStamp linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 26%;
+  }
+}
+@keyframes srStamp {
+  from {
+    opacity: 0;
+    transform: translateY(26px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── A hand-inked rule that wipes across as it enters ────────────────────── */
+.rule {
+  transform-origin: left center;
+}
+@supports (animation-timeline: view()) {
+  .rule {
+    transform: scaleX(0);
+    animation: srWipe linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+}
+@keyframes srWipe {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ── Engraver's sun rays behind the triumphant summit ────────────────────── */
+.rays {
+  position: absolute;
+  inset: -50% -20% auto -20%;
+  height: 150%;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 28%,
+    rgba(28, 24, 19, 0.14) 0deg 1.4deg,
+    transparent 1.4deg 9deg
+  );
+  -webkit-mask-image: radial-gradient(circle at 50% 28%, black, transparent 60%);
+  mask-image: radial-gradient(circle at 50% 28%, black, transparent 60%);
+  animation: srSpin 140s linear infinite;
+  pointer-events: none;
+}
+@keyframes srSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .draw :global(path) {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .rule {
+    transform: scaleX(1);
+    animation: none;
+  }
+  .rays {
+    animation: none;
+  }
+}

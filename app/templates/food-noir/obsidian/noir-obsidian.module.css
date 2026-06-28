@@ -1,0 +1,151 @@
+/* Obsidian — Cinema. Each dish gets its own full-screen frame. */
+
+.page {
+  background: #080808;
+  color: #f0ebe3;
+  overflow-x: clip;
+}
+
+/* ── Fixed nav ──────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 2.5rem;
+  background: linear-gradient(to bottom, rgba(8,8,8,0.85) 0%, transparent 100%);
+  pointer-events: none;
+}
+.nav > * { pointer-events: auto; }
+.navName {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+.navReserve {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 0.45rem 1.1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.navReserve:hover {
+  background: #c9a84c;
+  color: #080808;
+}
+
+/* ── Full-height dish scenes ────────────────────────────────── */
+.scene {
+  position: relative;
+  height: 100svh;
+  min-height: 600px;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem 2.5rem;
+}
+.sceneBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.sceneRule {
+  position: absolute;
+  top: 0; left: 2.5rem; right: 2.5rem;
+  height: 1px;
+  background: rgba(255,255,255,0.07);
+  z-index: 1;
+}
+.sceneContent {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+.sceneLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.sceneName {
+  font-family: var(--font-serif);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(2.5rem, 7vw, 5.5rem));
+  font-weight: 300;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+.sceneDesc {
+  font-size: 0.9375rem;
+  color: #787060;
+  max-width: 44ch;
+  line-height: 1.65;
+  margin: 0;
+}
+.scrollHint {
+  position: absolute;
+  bottom: 2.5rem; right: 2.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(240,235,227,0.2);
+  writing-mode: vertical-rl;
+  z-index: 1;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  background: #030303;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem 2.5rem 5rem;
+}
+.footerBlock h3 {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin: 0 0 1rem;
+}
+.footerBlock p {
+  font-size: 0.9375rem;
+  color: #787060;
+  line-height: 1.7;
+  margin: 0;
+}
+.footerCta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 0.6rem 1.4rem;
+  transition: background 0.2s, color 0.2s;
+}
+.footerCta:hover {
+  background: #c9a84c;
+  color: #030303;
+}
+
+@media (max-width: 640px) {
+  .footer { grid-template-columns: 1fr; }
+  .nav { padding: 1.25rem 1.25rem; }
+  .scene { padding: 2rem 1.25rem; }
+  .sceneRule { left: 1.25rem; right: 1.25rem; }
+  .scrollHint { display: none; }
+}

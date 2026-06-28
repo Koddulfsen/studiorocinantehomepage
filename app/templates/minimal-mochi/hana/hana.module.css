@@ -1,0 +1,271 @@
+/* Hana — East Asian cafe. Cream, soft rose, lots of air. Minimal and cute. */
+
+.page {
+  background: #F8F4EF;
+  color: #1C1814;
+  --accent: #C4877A;
+  overflow-x: clip;
+}
+
+/* ── Nav ────────────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-bottom: 1px solid rgba(28,24,20,0.08);
+}
+.navName {
+  font-family: var(--font-primary, var(--font-cormorant));
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.06em;
+}
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.navLinks a {
+  font-family: var(--font-secondary, var(--font-josefin));
+  font-size: 0.5625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(28,24,20,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLinks a:hover { color: #1C1814; }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 520px;
+}
+.heroImg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--slot-1, radial-gradient(ellipse 70% 80% at 50% 40%, #c8a08a 0%, #8a5a44 40%, #3a2018 80%, #14090400 100%));
+  background-size: cover;
+  background-position: center;
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #F8F4EF 0%, rgba(248,244,239,0.55) 35%, transparent 65%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3.5rem 2.5rem;
+}
+.heroSub {
+  font-family: var(--font-secondary, var(--font-josefin));
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+}
+.heroName {
+  font-family: var(--font-primary, var(--font-cormorant));
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(5rem, 14vw, 12rem));
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  margin: 0 0 1rem;
+  color: #1C1814;
+}
+.heroTagline {
+  font-family: var(--font-body, var(--font-crimson));
+  font-size: clamp(1rem, 1.75vw, 1.25rem);
+  font-style: italic;
+  color: rgba(28,24,20,0.55);
+  margin: 0;
+}
+
+/* ── Intro ──────────────────────────────────────────────────── */
+.intro {
+  padding: 4.5rem 2.5rem;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid rgba(28,24,20,0.07);
+}
+.introText {
+  font-family: var(--font-body, var(--font-crimson));
+  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  line-height: 1.85;
+  color: rgba(28,24,20,0.6);
+  margin: 0;
+}
+
+/* ── Photo pair ─────────────────────────────────────────────── */
+.photoRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(28,24,20,0.07);
+}
+.photoWrap {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(28,24,20,0.07);
+}
+.photoWrap:last-child { border-right: none; }
+.photoLeft {
+  flex: 1;
+  min-height: 420px;
+  background-image: var(--slot-2, radial-gradient(ellipse 60% 70% at 50% 45%, #d4b090 0%, #9a6848 45%, #3c200c 80%, #120a0400 100%));
+  background-size: cover;
+  background-position: center;
+}
+.photoRight {
+  flex: 1;
+  min-height: 420px;
+  background-image: var(--slot-3, radial-gradient(ellipse 55% 65% at 50% 40%, #a8c0a0 0%, #6a8858 40%, #2c3820 80%, #0c100800 100%));
+  background-size: cover;
+  background-position: center;
+}
+.photoCaption {
+  font-family: var(--font-primary, var(--font-cormorant));
+  font-size: 0.875rem;
+  font-style: italic;
+  color: rgba(28,24,20,0.38);
+  padding: 0.875rem 1.5rem;
+  border-top: 1px solid rgba(28,24,20,0.07);
+}
+
+/* ── Menu ───────────────────────────────────────────────────── */
+.menu {
+  padding: 5rem 2.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(28,24,20,0.07);
+}
+.menuEyebrow {
+  display: block;
+  font-family: var(--font-secondary, var(--font-josefin));
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 3.5rem;
+}
+.menuSection {}
+.menuSectionLabel {
+  display: block;
+  font-family: var(--font-secondary, var(--font-josefin));
+  font-size: 0.5625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--accent);
+  margin-bottom: 0.25rem;
+}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(28,24,20,0.06);
+  gap: 1rem;
+}
+.menuItemName {
+  font-family: var(--font-primary, var(--font-cormorant));
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+.menuItemPrice {
+  font-family: var(--font-secondary, var(--font-josefin));
+  font-size: 0.5625rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ── Visit ──────────────────────────────────────────────────── */
+.visit {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-bottom: 1px solid rgba(28,24,20,0.07);
+}
+.visitImg {
+  background-image: var(--slot-4, radial-gradient(ellipse 60% 70% at 50% 50%, #c8a890 0%, #88604a 40%, #38180c 80%, #12060200 100%));
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  border-right: 1px solid rgba(28,24,20,0.07);
+}
+.visitInfo {
+  padding: 3.5rem 3rem;
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.visitBlock {}
+.visitLabel {
+  display: block;
+  font-family: var(--font-secondary, var(--font-josefin));
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.875rem;
+}
+.visitText {
+  font-family: var(--font-body, var(--font-crimson));
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: rgba(28,24,20,0.55);
+  margin: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  padding: 1.75rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footerName {
+  font-family: var(--font-primary, var(--font-cormorant));
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgba(28,24,20,0.4);
+}
+.footerRight {
+  font-family: var(--font-secondary, var(--font-josefin));
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(28,24,20,0.25);
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.25rem 1.5rem; }
+  .heroOverlay { padding: 2.5rem 1.5rem; }
+  .intro { padding: 3rem 1.5rem; }
+  .photoRow { grid-template-columns: 1fr; }
+  .photoWrap { border-right: none; border-bottom: 1px solid rgba(28,24,20,0.07); }
+  .photoLeft, .photoRight { min-height: 280px; }
+  .menu { padding: 3rem 1.5rem; }
+  .menuGrid { grid-template-columns: 1fr; gap: 2rem; }
+  .visit { grid-template-columns: 1fr; }
+  .visitImg { min-height: 220px; border-right: none; border-bottom: 1px solid rgba(28,24,20,0.07); }
+  .visitInfo { padding: 2.5rem 1.5rem; gap: 2rem; }
+  .footer { padding: 1.5rem 1.5rem; }
+}

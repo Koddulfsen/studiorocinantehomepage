@@ -15,6 +15,24 @@
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
   --font-hand: var(--font-caveat), ui-sans-serif, cursive;
+  /* Template-specific fonts */
+  --font-display: var(--font-bebas), Impact, ui-sans-serif, sans-serif;
+  --font-body-serif: var(--font-lora), ui-serif, Georgia, serif;
+  --font-cormorant: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-playfair: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-josefin: var(--font-josefin), ui-sans-serif, system-ui, sans-serif;
+  --font-crimson: var(--font-crimson), ui-serif, Georgia, serif;
+  /* Extended font palette */
+  --font-dm-serif: var(--font-dm-serif), ui-serif, Georgia, serif;
+  --font-bodoni: var(--font-bodoni), ui-serif, Georgia, serif;
+  --font-space-grotesk: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-syne: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --font-garamond: var(--font-garamond), ui-serif, Georgia, serif;
+  --font-raleway: var(--font-raleway), ui-sans-serif, system-ui, sans-serif;
+  --font-abril: var(--font-abril), ui-serif, Georgia, serif;
+  --font-baskerville: var(--font-baskerville), ui-serif, Georgia, serif;
+  --font-nunito: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-spectral: var(--font-spectral), ui-serif, Georgia, serif;
 }
 
 html {

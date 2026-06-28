@@ -1,0 +1,251 @@
+/* Chronicle — Scrolling neighborhood story. Warm sepia, chapter-by-chapter. */
+
+.page {
+  background: #F0E6D2;
+  color: #1E140A;
+  overflow-x: clip;
+}
+
+/* ── Nav ────────────────────────────────────────────────────── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #F0E6D2;
+  border-bottom: 1px solid rgba(30,20,10,0.12);
+}
+.navName {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.navLinks a {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(30,20,10,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLinks a:hover { color: #8a5c28; }
+
+/* ── Hero chapter ───────────────────────────────────────────── */
+.heroChapter {
+  position: relative;
+  min-height: calc(100svh - 49px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 4rem 2.5rem 3.5rem;
+  overflow: hidden;
+}
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--slot-1, radial-gradient(ellipse 75% 65% at 50% 35%, #6a3a10 0%, #2e1808 45%, #0c0604 100%));
+  background-size: cover;
+  background-position: center;
+}
+.heroFade {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60%;
+  background: linear-gradient(to top, #F0E6D2 0%, transparent 100%);
+}
+.heroInner {
+  position: relative;
+  z-index: 1;
+}
+.chapterNum {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: rgba(240,230,210,0.45);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+.heroName {
+  font-family: var(--font-serif);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(3.5rem, 10vw, 8rem));
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: #F0E6D2;
+  margin: 0 0 1.5rem;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.3);
+}
+.heroDek {
+  font-size: 1rem;
+  color: rgba(240,230,210,0.7);
+  max-width: 42ch;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Chapter sections ───────────────────────────────────────── */
+.chapter {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  padding: 0 2.5rem;
+  border-top: 1px solid rgba(30,20,10,0.1);
+}
+.chapterSidebar {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-right: 1px solid rgba(30,20,10,0.1);
+  padding-right: 1.5rem;
+}
+.chapterLabel {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #8a5c28;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.chapterBody {
+  padding: 3rem 0 3rem 2.5rem;
+}
+.chapterHeading {
+  font-family: var(--font-body-serif);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+  font-style: italic;
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+.chapterText {
+  font-family: var(--font-body-serif);
+  font-size: 0.9375rem;
+  color: #5a4030;
+  line-height: 1.85;
+  max-width: 52ch;
+  margin: 0;
+}
+
+/* ── Atmosphere image block ─────────────────────────────────── */
+.atmosphereBlock {
+  margin: 0 2.5rem;
+  background-image: var(--slot-2, radial-gradient(ellipse 70% 65% at 45% 50%, #4a2808 0%, #1c0c04 50%, #070302 100%));
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+  border-top: 1px solid rgba(30,20,10,0.1);
+}
+
+/* ── Menu chapter ───────────────────────────────────────────── */
+.menuChapter {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0;
+  padding: 0 2.5rem;
+  border-top: 1px solid rgba(30,20,10,0.1);
+}
+.menuBody {
+  padding: 3rem 0 3rem 2.5rem;
+}
+.menuHeading {
+  font-family: var(--font-body-serif);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+  font-style: italic;
+  margin: 0 0 2rem;
+}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(30,20,10,0.08);
+  gap: 1rem;
+  max-width: 520px;
+}
+.menuItemName {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.menuItemPrice {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #8a5c28;
+  white-space: nowrap;
+}
+
+/* ── Closing chapter ────────────────────────────────────────── */
+.closing {
+  border-top: 1px solid rgba(30,20,10,0.1);
+  padding: 4rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.closingBlock h3 {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #8a5c28;
+  margin: 0 0 0.875rem;
+}
+.closingBlock p {
+  font-size: 0.9375rem;
+  color: #5a4030;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  border-top: 1px solid rgba(30,20,10,0.12);
+  padding: 1.25rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footerName {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #8a5c28;
+}
+.footerSub {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(30,20,10,0.3);
+}
+
+@media (max-width: 768px) {
+  .chapter, .menuChapter { grid-template-columns: 1fr; padding: 0 1.5rem; }
+  .chapterSidebar { border-right: none; border-bottom: 1px solid rgba(30,20,10,0.1); padding: 1.25rem 0; flex-direction: row; }
+  .chapterLabel { writing-mode: horizontal-tb; transform: none; }
+  .chapterBody, .menuBody { padding: 2rem 0; }
+  .atmosphereBlock { margin: 0 1.5rem; height: 280px; }
+  .closing { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; }
+  .heroChapter { padding: 2.5rem 1.5rem; }
+  .nav { padding: 1rem 1.5rem; }
+  .footer { padding: 1.25rem 1.5rem; }
+}

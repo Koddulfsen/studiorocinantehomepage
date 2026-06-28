@@ -1,0 +1,12 @@
+{
+  "templates": [
+    {
+      "version": 1,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "slots": {}
+    }
+  ]
+}

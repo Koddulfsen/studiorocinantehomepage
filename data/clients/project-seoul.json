@@ -1,0 +1,173 @@
+{
+  "templates": [
+    {
+      "version": 1,
+      "templateId": "story-market-grove",
+      "fontPreset": "neon",
+      "radius": "pill",
+      "accent": "#C4877A",
+      "slots": {
+        "slot-1": "/clients/project-seoul/vibe.png",
+        "slot-2": "/clients/project-seoul/icecream.png",
+        "slot-3": "/clients/project-seoul/menu.png",
+        "slot-4": "/clients/project-seoul/cashier.png"
+      }
+    },
+    {
+      "version": 2,
+      "templateId": "bold-neon-volt",
+      "fontPreset": "ink",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "slots": {}
+    },
+    {
+      "version": 3,
+      "templateId": "story-market-grove",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "slots": {}
+    },
+    {
+      "version": 4,
+      "templateId": "story-market-pantry",
+      "fontPreset": "modern",
+      "radius": "sharp",
+      "accent": "#7f7371",
+      "titleSize": 50,
+      "titleTransform": "uppercase",
+      "slots": {
+        "slot-1": "/clients/project-seoul/vibe.png",
+        "slot-2": "/clients/project-seoul/cashier.png",
+        "slot-3": "/clients/project-seoul/facade.png",
+        "slot-4": "/clients/project-seoul/icecream.png"
+      }
+    },
+    {
+      "version": 5,
+      "templateId": "food-polaroid-contact",
+      "fontPreset": "ink",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {}
+    },
+    {
+      "version": 6,
+      "templateId": "food-polaroid-contact",
+      "fontPreset": "ink",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/project-seoul/cashier.png",
+        "slot-2": "/clients/project-seoul/facade.png",
+        "slot-3": "/clients/project-seoul/vibe.png",
+        "slot-4": "/clients/project-seoul/icecream.png"
+      },
+      "copy": {
+        "tagline": "Korean café. Bingsu, croffle, matcha, and more.",
+        "body": "Project Seoul is a modern Korean café bringing the flavours of Seoul's café culture to Toronto. From shaved ice bingsu to buttery croffles and ceremonial matcha, every item is made with care and a little bit of obsession.",
+        "cta": "Come In",
+        "eyebrow": "KOREAN CAFÉ · TORONTO",
+        "label": "WHAT WE MAKE",
+        "menuItems": [
+          {
+            "name": "Bingsu",
+            "desc": "shaved milk ice, seasonal toppings",
+            "price": "$14"
+          },
+          {
+            "name": "Croffle",
+            "desc": "croissant waffle, honey butter",
+            "price": "$8"
+          },
+          {
+            "name": "Matcha Latte",
+            "desc": "ceremonial grade, oat or whole milk",
+            "price": "$7"
+          },
+          {
+            "name": "Iced Americano",
+            "desc": "double shot, house filtered water",
+            "price": "$5"
+          },
+          {
+            "name": "Dalgona Coffee",
+            "desc": "whipped instant, cold milk",
+            "price": "$7"
+          },
+          {
+            "name": "Tteok",
+            "desc": "soft rice cake, red bean or sesame",
+            "price": "$5"
+          },
+          {
+            "name": "Yuzu Lemonade",
+            "desc": "fresh yuzu, sparkling",
+            "price": "$6"
+          },
+          {
+            "name": "Sikhye",
+            "desc": "traditional sweet rice punch",
+            "price": "$5"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "at the counter",
+          "slot-2": "find us here",
+          "slot-3": "the atmosphere",
+          "slot-4": "bingsu season"
+        }
+      }
+    },
+    {
+      "version": 7,
+      "templateId": "story-market-pantry",
+      "fontPreset": "studio",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "uppercase",
+      "slots": {
+        "slot-1": "/clients/project-seoul/vibe.png",
+        "slot-2": "/clients/project-seoul/cashier.png",
+        "slot-3": "/clients/project-seoul/icecream.png",
+        "slot-4": "/clients/project-seoul/facade.png"
+      },
+      "copy": {
+        "tagline": "Seoul in a cup. Toronto at the table.",
+        "body": "Project Seoul is a Korean café rooted in the dessert culture of Seoul — bingsu piled high, croffles straight off the iron, and matcha pulled from ceremonial grade. We're a neighbourhood spot that takes what we serve seriously, without taking ourselves too seriously.",
+        "cta": "Stop By",
+        "eyebrow": "KOREAN CAFÉ · TORONTO",
+        "label": "WHAT WE MAKE",
+        "label2": "FROM OUR KITCHEN",
+        "sections": [
+          { "title": "Bingsu", "body": "Shaved milk ice loaded with toppings. Mango, strawberry, matcha, red bean — rotated seasonally. Made to order, served fast." },
+          { "title": "Croffle", "body": "Croissant dough pressed in a waffle iron until golden and layered. Honey butter, cream cheese, or seasonal fruit. Straight off the iron." },
+          { "title": "Coffee & Drinks", "body": "Matcha from ceremonial grade, dalgona whipped to order, yuzu lemonade house-made daily. Korean favourites alongside your usual espresso." }
+        ],
+        "menuItems": [
+          { "name": "Bingsu", "price": "$14" },
+          { "name": "Croffle", "price": "$8" },
+          { "name": "Matcha Latte", "price": "$7" },
+          { "name": "Iced Americano", "price": "$5" },
+          { "name": "Dalgona Coffee", "price": "$7" },
+          { "name": "Tteok", "price": "$5" },
+          { "name": "Yuzu Lemonade", "price": "$6" },
+          { "name": "Sikhye", "price": "$5" }
+        ],
+        "slotCaptions": {
+          "slot-1": "the room",
+          "slot-2": "at the pass",
+          "slot-3": "bingsu",
+          "slot-4": "come find us"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "templates": [
+    {
+      "version": 1,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {}
+    },
+    {
+      "version": 2,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/agenda-cafe-bar/homemade ice cream sandwich.png",
+        "slot-2": "/clients/agenda-cafe-bar/indoor seating plants.png",
+        "slot-3": "/clients/agenda-cafe-bar/mexican coke.png"
+      }
+    },
+    {
+      "version": 3,
+      "templateId": "atmosphere-corner-block",
+      "fontPreset": "classic",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/agenda-cafe-bar/homemade ice cream sandwich.png",
+        "slot-2": "/clients/agenda-cafe-bar/indoor seating plants.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+/* Cellar — Deep burgundy, intimate. Wine bar energy. */
+
+.page {
+  background: #1A0A10;
+  color: #EDE0D4;
+  overflow-x: clip;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 3rem;
+  border-bottom: 1px solid rgba(237,224,212,0.07);
+}
+.navName {
+  font-family: var(--font-playfair);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.navCta {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #EDE0D4;
+  border: 1px solid rgba(237,224,212,0.2);
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.navCta:hover { background: rgba(237,224,212,0.06); border-color: rgba(237,224,212,0.5); }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100svh - 65px);
+  border-bottom: 1px solid rgba(237,224,212,0.07);
+}
+.heroLeft {
+  background-image: var(--slot-1, radial-gradient(ellipse 70% 60% at 45% 50%, #5a1a28 0%, #280a14 50%, #0e0408 100%));
+  background-size: cover;
+  background-position: center;
+  border-right: 1px solid rgba(237,224,212,0.07);
+}
+.heroRight {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.heroTop {}
+.heroEyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(237,224,212,0.3);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.heroName {
+  font-family: var(--font-playfair);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(3rem, 6vw, 5.5rem));
+  font-weight: 700;
+  line-height: 0.95;
+  margin: 0;
+}
+.heroBottom {}
+.heroTagline {
+  font-family: var(--font-playfair);
+  font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+  font-style: italic;
+  line-height: 1.65;
+  color: rgba(237,224,212,0.5);
+  max-width: 36ch;
+  margin: 0 0 2rem;
+}
+.heroInfo {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  color: rgba(237,224,212,0.3);
+  line-height: 2;
+}
+
+/* ── Wine list (menu) ───────────────────────────────────────── */
+.wines {
+  padding: 4rem 3rem;
+  border-bottom: 1px solid rgba(237,224,212,0.07);
+}
+.winesTitle {
+  font-family: var(--font-playfair);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+}
+.winesSub {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(237,224,212,0.3);
+  display: block;
+  margin-bottom: 2rem;
+}
+.winesRule { height: 1px; background: rgba(237,224,212,0.1); margin-bottom: 0; }
+.wineItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(237,224,212,0.06);
+  gap: 1rem;
+}
+.wineItemLeft { display: flex; flex-direction: column; gap: 0.2rem; }
+.wineItemName {
+  font-family: var(--font-playfair);
+  font-size: 1rem;
+  font-style: italic;
+}
+.wineItemRegion {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  color: rgba(237,224,212,0.28);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.wineItemPrice {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: rgba(237,224,212,0.4);
+  white-space: nowrap;
+}
+
+/* ── Atmosphere strip ───────────────────────────────────────── */
+.strip {
+  height: 280px;
+  background-image: var(--slot-2, radial-gradient(ellipse 80% 60% at 50% 50%, #4a1020 0%, #1e0810 50%, #080306 100%));
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(237,224,212,0.07);
+  border-bottom: 1px solid rgba(237,224,212,0.07);
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  padding: 2.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footerLeft {}
+.footerName {
+  font-family: var(--font-playfair);
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.footerSub {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(237,224,212,0.25);
+}
+.footerRight {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: rgba(237,224,212,0.3);
+  text-align: right;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.25rem 1.5rem; }
+  .hero { grid-template-columns: 1fr; }
+  .heroLeft { min-height: 55vw; border-right: none; }
+  .heroRight { padding: 2.5rem 1.5rem; }
+  .wines { padding: 2.5rem 1.5rem; }
+  .footer { padding: 2rem 1.5rem; }
+  .footerRight { text-align: left; }
+}

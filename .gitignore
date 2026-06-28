@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# leads data — large Google Maps scrape, stays local
+/leads/
+
+# claude scratchpad
+.claude/

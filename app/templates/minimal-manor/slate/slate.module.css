@@ -1,0 +1,176 @@
+/* Slate — Charcoal, maximum restraint. Fine dining, nothing wasted. */
+
+.page {
+  background: #1E1E1E;
+  color: #E8E2D8;
+  overflow-x: clip;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3.5rem;
+}
+.navName {
+  font-family: var(--font-serif);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.navLinks a {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(232,226,216,0.35);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLinks a:hover { color: #E8E2D8; }
+
+.hero {
+  padding: 6rem 3.5rem 5rem;
+  border-top: 1px solid rgba(232,226,216,0.08);
+  border-bottom: 1px solid rgba(232,226,216,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: end;
+  min-height: calc(100svh - 81px);
+}
+.heroLeft {}
+.heroName {
+  font-family: var(--font-serif);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(3.5rem, 7vw, 6rem));
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.heroLabel {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(232,226,216,0.3);
+  display: block;
+}
+.heroTagline {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.75vw, 1.25rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(232,226,216,0.6);
+  max-width: 38ch;
+  margin: 0;
+}
+.heroCta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #E8E2D8;
+  border: 1px solid rgba(232,226,216,0.25);
+  padding: 0.65rem 1.5rem;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: border-color 0.2s, background 0.2s;
+}
+.heroCta:hover { border-color: rgba(232,226,216,0.7); background: rgba(232,226,216,0.05); }
+
+.image {
+  background-image: var(--slot-1, radial-gradient(ellipse 55% 55% at 50% 50%, #3a2010 0%, #181008 50%, #080604 100%));
+  background-size: cover;
+  background-position: center;
+  height: 480px;
+  border-bottom: 1px solid rgba(232,226,216,0.08);
+}
+
+.menu {
+  padding: 4.5rem 3.5rem;
+  border-bottom: 1px solid rgba(232,226,216,0.08);
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+.menuLabel {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(232,226,216,0.3);
+  display: block;
+  margin-bottom: 2.5rem;
+}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(232,226,216,0.06);
+  gap: 1rem;
+}
+.menuItemLeft { display: flex; flex-direction: column; gap: 0.25rem; }
+.menuItemName {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 300;
+}
+.menuItemDesc {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: rgba(232,226,216,0.28);
+  letter-spacing: 0.08em;
+}
+.menuItemPrice {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: rgba(232,226,216,0.45);
+  white-space: nowrap;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 3.5rem 3.5rem 4rem;
+  gap: 2rem;
+  border-top: 1px solid rgba(232,226,216,0.08);
+}
+.footerBlock h3 {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(232,226,216,0.25);
+  margin: 0 0 0.875rem;
+}
+.footerBlock p {
+  font-size: 0.9rem;
+  color: rgba(232,226,216,0.45);
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.5rem 1.5rem; }
+  .hero { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; min-height: auto; }
+  .menu { padding: 3rem 1.5rem; }
+  .footer { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; }
+}

@@ -1,0 +1,376 @@
+{
+  "templates": [
+    {
+      "version": 1,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "modern",
+      "radius": "round",
+      "accent": "#c4877a",
+      "slots": {}
+    },
+    {
+      "version": 2,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "signal",
+      "radius": "round",
+      "accent": "#e5a4c7",
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/owner.png",
+        "slot-2": "/clients/mochi-mochi-cafe/buns2.png",
+        "slot-3": "/clients/mochi-mochi-cafe/buns.png"
+      }
+    },
+    {
+      "version": 3,
+      "templateId": "bold-neon-volt",
+      "fontPreset": "editorial",
+      "radius": "sharp",
+      "accent": "#ad7c71",
+      "slots": {}
+    },
+    {
+      "version": 4,
+      "templateId": "bold-marquee-stamp",
+      "fontPreset": "vogue",
+      "radius": "sharp",
+      "accent": "#895043",
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/seating2.png",
+        "slot-3": "/clients/mochi-mochi-cafe/owner.png",
+        "slot-2": "/clients/mochi-mochi-cafe/buns2.png"
+      }
+    },
+    {
+      "version": 5,
+      "templateId": "bold-marquee-stamp",
+      "fontPreset": "harvest",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "slots": {}
+    },
+    {
+      "version": 6,
+      "templateId": "minimal-manor-slate",
+      "fontPreset": "warmth",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "slots": {}
+    },
+    {
+      "version": 7,
+      "templateId": "bold-neon-volt",
+      "fontPreset": "signal",
+      "radius": "soft",
+      "accent": "#C4877A",
+      "slots": {}
+    },
+    {
+      "version": 8,
+      "templateId": "minimal-manor-linen",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "slots": {}
+    },
+    {
+      "version": 9,
+      "templateId": "food-polaroid-roll",
+      "fontPreset": "literary",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/seating.png",
+        "slot-2": "/clients/mochi-mochi-cafe/buns2.png",
+        "slot-3": "/clients/mochi-mochi-cafe/owner.png",
+        "slot-4": "/clients/mochi-mochi-cafe/table.png"
+      }
+    },
+    {
+      "version": 10,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "studio",
+      "radius": "sharp",
+      "accent": "#e33c16",
+      "titleSize": 22,
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/seating2.png",
+        "slot-2": "/clients/mochi-mochi-cafe/buns2.png",
+        "slot-3": "/clients/mochi-mochi-cafe/seating.png",
+        "slot-4": "/clients/mochi-mochi-cafe/owner.png"
+      }
+    },
+    {
+      "version": 11,
+      "templateId": "story-broadsheet-ledger",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "slots": {}
+    },
+    {
+      "version": 12,
+      "templateId": "story-market-pantry",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 60,
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/buns2.png",
+        "slot-2": "/clients/mochi-mochi-cafe/buns.png",
+        "slot-3": "/clients/mochi-mochi-cafe/owner.png",
+        "slot-4": "/clients/mochi-mochi-cafe/table.png"
+      }
+    },
+    {
+      "version": 13,
+      "templateId": "bold-neon-volt",
+      "fontPreset": "harvest",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/buns2.png"
+      }
+    },
+    {
+      "version": 14,
+      "templateId": "bold-marquee-stamp",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "slots": {}
+    },
+    {
+      "version": 15,
+      "templateId": "bold-marquee-signal",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#ffffff",
+      "titleSize": 50,
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/table.png",
+        "slot-2": "/clients/mochi-mochi-cafe/owner.png"
+      }
+    },
+    {
+      "version": 16,
+      "templateId": "bold-neon-volt",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#f4360b",
+      "titleSize": 50,
+      "slots": {}
+    },
+    {
+      "version": 17,
+      "templateId": "minimal-mochi-hana",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {}
+    },
+    {
+      "version": 18,
+      "templateId": "bold-marquee-stamp",
+      "fontPreset": "modern",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/seating.png",
+        "slot-2": "/clients/mochi-mochi-cafe/buns2.png",
+        "slot-3": "/clients/mochi-mochi-cafe/owner.png"
+      },
+      "copy": {
+        "tagline": "Soft, sweet, and made with love.",
+        "body": "Mochi Mochi is a cozy Toronto café devoted to the pillowy, the delicate, and the handmade. Every mochi is shaped by hand each morning — filled with red bean, matcha cream, or seasonal fruit. Come in, slow down, have two.",
+        "cta": "Come Try One",
+        "eyebrow": "MOCHI CAFÉ · TORONTO",
+        "label": "WHAT WE MAKE",
+        "label2": "THE MENU",
+        "sections": [
+          {
+            "title": "Mochi",
+            "body": "Hand-shaped daily, filled with red bean, matcha cream, black sesame, or whatever's in season. Limited quantities — once they're gone, they're gone."
+          },
+          {
+            "title": "Drinks",
+            "body": "Matcha lattes, hojicha, house-made boba, and drip coffee. Everything pairs well with a mochi or two."
+          },
+          {
+            "title": "Buns & Bites",
+            "body": "Steamed buns fresh from the kitchen. Soft, pillowy, and filled generously. A little savoury to balance all the sweet."
+          }
+        ],
+        "menuItems": [
+          {
+            "name": "Mochi — Red Bean",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Matcha Cream",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Black Sesame",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Seasonal",
+            "price": "$5"
+          },
+          {
+            "name": "Steamed Bun",
+            "desc": "rotating filling, ask us",
+            "price": "$6"
+          },
+          {
+            "name": "Matcha Latte",
+            "desc": "ceremonial grade, oat or whole",
+            "price": "$7"
+          },
+          {
+            "name": "Hojicha Latte",
+            "desc": "roasted green tea, warm or iced",
+            "price": "$7"
+          },
+          {
+            "name": "Drip Coffee",
+            "price": "$3.50"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "a good seat",
+          "slot-2": "fresh from the kitchen",
+          "slot-3": "made by hand"
+        }
+      }
+    },
+    {
+      "version": 19,
+      "templateId": "atmosphere-corner-block",
+      "fontPreset": "modern",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "copy": {
+        "tagline": "Japanese mochi, made small-batch in Toronto.",
+        "body": "Mochi Mochi is a quiet little café with a big soft spot for Japanese sweets. We make mochi by hand every morning — chewy, delicate, and filled with care. Pull up a chair, order a latte, stay a while.",
+        "cta": "Come In",
+        "eyebrow": "JAPANESE CAFÉ · TORONTO",
+        "label": "OUR STORY",
+        "label2": "WHAT'S ON",
+        "sections": [
+          {
+            "title": "The Mochi",
+            "body": "Hand-shaped each morning in small batches. Red bean, matcha cream, black sesame, yuzu — the selection changes with the season. Always limited, always worth coming early for."
+          },
+          {
+            "title": "The Drinks",
+            "body": "Matcha and hojicha sourced from Japanese producers, pulled as lattes or served straight over ice. House drip coffee brewed to order. Simple and done properly."
+          },
+          {
+            "title": "The Space",
+            "body": "A small room with good light, soft music, and no rush. We built it to feel like somewhere you'd want to be on a slow afternoon. Bring a book."
+          }
+        ],
+        "menuItems": [
+          {
+            "name": "Mochi — Red Bean",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Matcha Cream",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Black Sesame",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Yuzu",
+            "price": "$5"
+          },
+          {
+            "name": "Matcha Latte",
+            "desc": "ceremonial grade",
+            "price": "$7"
+          },
+          {
+            "name": "Hojicha Latte",
+            "desc": "warm or iced",
+            "price": "$7"
+          },
+          {
+            "name": "Drip Coffee",
+            "desc": "single origin, brewed to order",
+            "price": "$3.50"
+          },
+          {
+            "name": "Sparkling Yuzu",
+            "price": "$5"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "the café",
+          "slot-2": "made this morning"
+        }
+      },
+      "titleTransform": "uppercase",
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/seating.png",
+        "slot-2": "/clients/mochi-mochi-cafe/buns2.png"
+      }
+    },
+    {
+      "version": 20,
+      "templateId": "story-market-pantry",
+      "fontPreset": "hana",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 50,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/table.png",
+        "slot-2": "/clients/mochi-mochi-cafe/buns2.png",
+        "slot-3": "/clients/mochi-mochi-cafe/seating.png",
+        "slot-4": "/clients/mochi-mochi-cafe/owner.png"
+      },
+      "copy": {
+        "tagline": "Little sweets, made by hand, every morning.",
+        "body": "Mochi Mochi is a cozy neighbourhood café where the mochi is always fresh and the seats are always warm. We make everything in small batches — shaped by hand, filled with care, gone by afternoon. The kind of place you come back to.",
+        "cta": "Pop In",
+        "eyebrow": "MOCHI CAFÉ · TORONTO",
+        "label": "WHAT WE DO",
+        "label2": "WHAT'S GOOD",
+        "sections": [
+          { "title": "Mochi", "body": "Hand-shaped every morning in small batches. Red bean, matcha cream, black sesame, and whatever's seasonal. They go fast — come early if you have a favourite." },
+          { "title": "Drinks", "body": "Matcha and hojicha lattes made with quality leaves, plus drip coffee and a rotating house special. Everything is made to sit and savour, not to grab and go." },
+          { "title": "The Space", "body": "A small, unhurried room with good light and a table worth lingering at. We keep it simple so the food can speak. You're welcome to stay as long as you like." }
+        ],
+        "menuItems": [
+          { "name": "Mochi — Red Bean", "price": "$4" },
+          { "name": "Mochi — Matcha Cream", "price": "$4" },
+          { "name": "Mochi — Black Sesame", "price": "$4" },
+          { "name": "Mochi — Seasonal", "price": "$5" },
+          { "name": "Matcha Latte", "desc": "ceremonial grade, oat or whole", "price": "$7" },
+          { "name": "Hojicha Latte", "desc": "warm or iced", "price": "$7" },
+          { "name": "Drip Coffee", "desc": "single origin, filter", "price": "$3.50" },
+          { "name": "House Special", "desc": "ask us what's on today", "price": "$6" }
+        ],
+        "slotCaptions": {
+          "slot-1": "a table for you",
+          "slot-2": "this morning's batch",
+          "slot-3": "come sit",
+          "slot-4": "the hands behind it"
+        }
+      }
+    }
+  ]
+}

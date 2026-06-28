@@ -1,0 +1,147 @@
+/* The Trail — scroll-driven journey.
+   All motion is progressive enhancement: where scroll-timeline isn't supported,
+   the fill sits full, the rider sits at top, and reveals are simply visible. */
+
+.page {
+  position: relative;
+  overflow-x: clip;
+}
+
+/* ── Left progress rail (large screens only) ─────────────────────────────── */
+.rail {
+  position: fixed;
+  left: 26px;
+  top: 12vh;
+  bottom: 12vh;
+  width: 2px;
+  z-index: 40;
+  pointer-events: none;
+}
+.railTrack {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    var(--color-gold-deep) 0 5px,
+    transparent 5px 12px
+  );
+  opacity: 0.4;
+}
+.railFill {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(var(--color-gold-soft), var(--color-gold));
+  transform: scaleY(1);
+  transform-origin: top center;
+  border-radius: 2px;
+}
+.rider {
+  position: fixed;
+  left: 12px;
+  top: 12vh;
+  z-index: 41;
+  color: var(--color-gold-deep);
+  pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
+}
+
+@supports (animation-timeline: scroll()) {
+  .railFill {
+    transform: scaleY(0);
+    animation: srFill linear forwards;
+    animation-timeline: scroll(root block);
+  }
+  .rider {
+    animation: srRide linear forwards;
+    animation-timeline: scroll(root block);
+  }
+}
+@keyframes srFill {
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes srRide {
+  to {
+    top: calc(88vh - 24px);
+  }
+}
+
+/* ── Reveal-on-enter ─────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 1;
+}
+@supports (animation-timeline: view()) {
+  .reveal {
+    opacity: 0;
+    animation: srRise linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+@keyframes srRise {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Atmospheric bits ────────────────────────────────────────────────────── */
+/* Slow-rotating sunburst behind the triumphant final chapter. */
+.sunrays {
+  position: absolute;
+  inset: -40% -10% auto -10%;
+  height: 140%;
+  background: repeating-conic-gradient(
+    from 0deg at 50% 30%,
+    rgba(240, 198, 79, 0.22) 0deg 3deg,
+    transparent 3deg 13deg
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 30%,
+    black,
+    transparent 62%
+  );
+  mask-image: radial-gradient(circle at 50% 30%, black, transparent 62%);
+  animation: srSpin 120s linear infinite;
+  pointer-events: none;
+}
+@keyframes srSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* A faint drifting cloud band for the cooling "Giants" chapter. */
+.drift {
+  animation: srDrift 26s ease-in-out infinite alternate;
+}
+@keyframes srDrift {
+  to {
+    transform: translateX(3%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+  .sunrays,
+  .drift,
+  .railFill,
+  .rider {
+    animation: none;
+  }
+  .railFill {
+    transform: scaleY(1);
+  }
+}

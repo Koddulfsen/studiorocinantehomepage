@@ -1,0 +1,243 @@
+/* Volt — Electric yellow, maximum contrast, street food poster energy. */
+
+.page {
+  background: #EEFF00;
+  color: #0A0A0A;
+  overflow-x: clip;
+}
+
+/* ── Nav ────────────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 2px solid #0A0A0A;
+}
+.navName {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.navLinks a {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0A0A0A;
+  text-decoration: none;
+}
+.navLinks a:hover { text-decoration: underline; }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  min-height: calc(100svh - 57px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 2rem 2rem;
+  border-bottom: 2px solid #0A0A0A;
+}
+.heroTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.heroTag {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  border: 2px solid #0A0A0A;
+  padding: 0.35rem 0.75rem;
+}
+.heroLocation {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: right;
+}
+.heroName {
+  font-family: var(--font-display);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(5rem, 22vw, 17rem));
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: transparent;
+  -webkit-text-stroke: 8px #EEFF00;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 2rem;
+}
+.heroBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.heroImgWrap {
+  position: relative;
+  border-top: 2px solid #0A0A0A;
+  border-bottom: 2px solid #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.heroImg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--slot-1, radial-gradient(ellipse 70% 60% at 50% 50%, #1a1a00 0%, #0a0a00 60%, #040400 100%));
+  background-size: cover;
+  background-position: center;
+}
+.heroTagline {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 400;
+  max-width: 20ch;
+  line-height: 1.3;
+}
+.heroCta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  background: #0A0A0A;
+  color: #EEFF00;
+  padding: 0.85rem 1.75rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.15s, color 0.15s;
+}
+.heroCta:hover { background: #FF2D00; color: #fff; }
+
+/* ── Menu section (black) ───────────────────────────────────── */
+.menu {
+  background: #0A0A0A;
+  color: #EEFF00;
+  padding: 3rem 2rem;
+}
+.menuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(238,255,0,0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+.menuTitle {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(238,255,0,0.5);
+}
+.menuNote {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  color: rgba(238,255,0,0.4);
+}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(238,255,0,0.1);
+  gap: 1rem;
+}
+.menuItemLeft { display: flex; flex-direction: column; gap: 0.2rem; }
+.menuItemName {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1;
+}
+.menuItemDesc {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: rgba(238,255,0,0.45);
+  letter-spacing: 0.1em;
+}
+.menuItemPrice {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Info strip ─────────────────────────────────────────────── */
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 2px solid #0A0A0A;
+}
+.infoBlock {
+  padding: 2rem;
+  border-right: 2px solid #0A0A0A;
+}
+.infoBlock:last-child { border-right: none; }
+.infoLabel {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: block;
+  opacity: 0.5;
+}
+.infoValue {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  background: #0A0A0A;
+  color: #EEFF00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-top: 2px solid #EEFF00;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footerName {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.footerRight {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  opacity: 0.45;
+}
+
+@media (max-width: 640px) {
+  .heroName { -webkit-text-stroke: 2px #0A0A0A; }
+  .heroBottom { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .heroTop { flex-direction: column; gap: 0.75rem; }
+  .info { grid-template-columns: 1fr; }
+  .infoBlock { border-right: none; border-bottom: 2px solid #0A0A0A; }
+  .infoBlock:last-child { border-bottom: none; }
+}

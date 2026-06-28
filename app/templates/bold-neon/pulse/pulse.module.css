@@ -1,0 +1,268 @@
+/* Pulse — Dark base, neon green accents. Late-night diner energy. */
+
+.page {
+  background: #080808;
+  color: #F0ECE4;
+  overflow-x: clip;
+}
+
+/* ── Nav ────────────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  border-bottom: 1px solid rgba(0,255,135,0.15);
+}
+.navName {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #00FF87;
+}
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.navLinks a {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(240,236,228,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLinks a:hover { color: #00FF87; }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  min-height: calc(100svh - 49px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(0,255,135,0.1);
+}
+.heroLeft {
+  padding: 4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgba(0,255,135,0.1);
+}
+.heroTop {}
+.heroStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #00FF87;
+  margin-bottom: 2rem;
+}
+.statusDot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #00FF87;
+  box-shadow: 0 0 8px #00FF87;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.heroName {
+  font-family: var(--font-display);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(4rem, 10vw, 8rem));
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.heroBottom {}
+.heroTagline {
+  font-size: 0.9375rem;
+  color: rgba(240,236,228,0.45);
+  line-height: 1.65;
+  max-width: 36ch;
+  margin: 0 0 2rem;
+}
+.heroCta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #080808;
+  background: #00FF87;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.heroCta:hover { opacity: 0.8; }
+
+.heroRight {
+  background-image: var(--slot-1, radial-gradient(ellipse 70% 70% at 50% 50%, #0a2a1a 0%, #040e08 50%, #020505 100%));
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.heroRightGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 40% at 50% 50%, rgba(0,255,135,0.06) 0%, transparent 70%);
+}
+
+/* ── Ticker strip ───────────────────────────────────────────── */
+.ticker {
+  background: #00FF87;
+  color: #080808;
+  padding: 0.6rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: none;
+}
+.tickerInner {
+  display: inline-flex;
+  gap: 3rem;
+  animation: tickerScroll 20s linear infinite;
+}
+.tickerItem {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tickerInner { animation: none; }
+}
+
+/* ── Menu ───────────────────────────────────────────────────── */
+.menu {
+  padding: 4rem 2.5rem;
+  border-bottom: 1px solid rgba(0,255,135,0.1);
+}
+.menuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,255,135,0.15);
+}
+.menuTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.menuTime {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  color: #00FF87;
+}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  gap: 1rem;
+}
+.menuItemLeft { display: flex; flex-direction: column; gap: 0.2rem; }
+.menuItemName {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+.menuItemDesc {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: rgba(240,236,228,0.35);
+  letter-spacing: 0.05em;
+}
+.menuItemPrice {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: #00FF87;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Info strip ─────────────────────────────────────────────── */
+.info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(0,255,135,0.1);
+}
+.infoBlock {
+  padding: 2.5rem 2.5rem;
+  border-right: 1px solid rgba(0,255,135,0.1);
+}
+.infoBlock:last-child { border-right: none; }
+.infoLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #00FF87;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.infoValue {
+  font-size: 0.9375rem;
+  color: rgba(240,236,228,0.55);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  border-top: 1px solid rgba(0,255,135,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footerName {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #00FF87;
+}
+.footerRight {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: rgba(240,236,228,0.25);
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.25rem 1.5rem; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .heroLeft { padding: 2.5rem 1.5rem; min-height: 100svh; }
+  .heroRight { min-height: 60vw; }
+  .menu { padding: 2.5rem 1.5rem; }
+  .info { grid-template-columns: 1fr; }
+  .infoBlock { border-right: none; border-bottom: 1px solid rgba(0,255,135,0.1); }
+  .infoBlock:last-child { border-bottom: none; }
+  .footer { padding: 1.25rem 1.5rem; }
+}

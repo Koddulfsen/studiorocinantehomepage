@@ -1,0 +1,167 @@
+/* Candid — Single large photo, handwritten caption energy, personal and warm. */
+
+.page {
+  background: #FBF7F0;
+  color: #18130A;
+  --accent: #A0522D;
+  overflow-x: clip;
+}
+
+.nav {
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navName {
+  font-family: var(--font-cormorant);
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.navSub {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ── Full-width hero photo ──────────────────────────────────── */
+.heroPhoto {
+  width: 100%;
+  height: 72vh;
+  min-height: 420px;
+  background-image: var(--slot-1, radial-gradient(ellipse 65% 70% at 50% 45%, #5a2e0a 0%, #241208 45%, #080402 100%));
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.heroCaption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 2.5rem;
+  font-family: var(--font-cormorant);
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: rgba(255,248,240,0.6);
+}
+
+/* ── Name + intro ───────────────────────────────────────────── */
+.intro {
+  padding: 3.5rem 2.5rem;
+  border-bottom: 1px solid rgba(24,19,10,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.introLeft {}
+.introName {
+  font-family: var(--font-cormorant);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(3rem, 7vw, 5.5rem));
+  font-weight: 300;
+  line-height: 0.9;
+  margin: 0 0 0.75rem;
+}
+.introLocation {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.introRight {}
+.introBody {
+  font-family: var(--font-crimson);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: rgba(24,19,10,0.6);
+  max-width: 44ch;
+  margin: 0;
+}
+
+/* ── Small photo grid ───────────────────────────────────────── */
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: 1px solid rgba(24,19,10,0.08);
+  border-bottom: 1px solid rgba(24,19,10,0.08);
+}
+.photo {
+  aspect-ratio: 1;
+  border-right: 1px solid rgba(24,19,10,0.08);
+}
+.photo:last-child { border-right: none; }
+.photo.p1 { background-image: var(--slot-2, radial-gradient(ellipse 60% 60% at 50% 50%, #4a2808 0%, #1e0c04 50%, #060302 100%)); background-size: cover; background-position: center; }
+.photo.p2 { background-image: var(--slot-3, radial-gradient(ellipse 60% 60% at 50% 50%, #2a3020 0%, #0f1208 45%, #040404 100%)); background-size: cover; background-position: center; }
+.photo.p3 { background-image: var(--slot-4, radial-gradient(ellipse 60% 60% at 50% 50%, #3d1a06 0%, #150803 50%, #020202 100%)); background-size: cover; background-position: center; }
+
+/* ── Menu ───────────────────────────────────────────────────── */
+.menu {
+  padding: 3.5rem 2.5rem;
+  border-bottom: 1px solid rgba(24,19,10,0.08);
+  max-width: 600px;
+}
+.menuLabel {
+  font-family: var(--font-cormorant);
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0 0 1.5rem;
+  color: rgba(24,19,10,0.5);
+}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(24,19,10,0.07);
+  gap: 1rem;
+}
+.menuItemName {
+  font-family: var(--font-cormorant);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.menuItemPrice {
+  font-family: var(--font-josefin);
+  font-size: 0.625rem;
+  color: var(--accent);
+  white-space: nowrap;
+  letter-spacing: 0.08em;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  padding: 2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footerName {
+  font-family: var(--font-cormorant);
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(24,19,10,0.4);
+}
+.footerRight {
+  font-family: var(--font-josefin);
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(24,19,10,0.25);
+  text-align: right;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .intro { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 1.5rem; }
+  .menu { padding: 2.5rem 1.5rem; }
+  .nav { padding: 1.25rem 1.5rem; }
+  .footer { padding: 1.5rem 1.5rem; }
+  .heroCaption { left: 1.5rem; }
+}

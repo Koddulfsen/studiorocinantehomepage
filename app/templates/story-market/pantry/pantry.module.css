@@ -1,0 +1,217 @@
+/* Pantry — Warm cream, homemade feel, provenance-driven. Bakery/provisions. */
+
+.page {
+  background: #FAF5EC;
+  color: #1C140A;
+  --accent: #8B5E1A;
+  overflow-x: clip;
+}
+
+.nav {
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(28,20,10,0.1);
+}
+.navName {
+  font-family: var(--font-josefin);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.navRight {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(28,20,10,0.35);
+}
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgba(28,20,10,0.1);
+  min-height: calc(100svh - 65px);
+}
+.heroText {
+  padding: 4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(28,20,10,0.1);
+}
+.heroSmall {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.heroName {
+  font-family: var(--font-josefin);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(3rem, 7vw, 6rem));
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.5rem;
+}
+.heroTagline {
+  font-family: var(--font-crimson);
+  font-size: clamp(1rem, 1.75vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.65;
+  color: rgba(28,20,10,0.55);
+  max-width: 36ch;
+  margin: 0 0 2.5rem;
+}
+.heroCta {
+  display: inline-block;
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  padding: 0.65rem 1.5rem;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background 0.2s, color 0.2s;
+}
+.heroCta:hover { background: var(--accent); color: #FAF5EC; }
+.heroImage {
+  background-image: var(--slot-1, radial-gradient(ellipse 65% 65% at 50% 45%, #5a3010 0%, #2a1508 50%, #0a0503 100%));
+  background-size: cover;
+  background-position: center;
+}
+
+/* ── Provisions (story) ─────────────────────────────────────── */
+.provisions {
+  padding: 4rem 2.5rem;
+  border-bottom: 1px solid rgba(28,20,10,0.1);
+}
+.provisionsLabel {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 2rem;
+}
+.provisionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.provision {}
+.provisionImg {
+  width: 100%;
+  aspect-ratio: 4/3;
+  margin-bottom: 1.25rem;
+  background-size: cover;
+  background-position: center;
+}
+.provisionImg1 { background-image: var(--slot-2, radial-gradient(ellipse 60% 65% at 50% 45%, #5a3010 0%, #2a1508 50%, #0a0503 100%)); }
+.provisionImg2 { background-image: var(--slot-3, radial-gradient(ellipse 60% 65% at 50% 45%, #3d2808 0%, #1a1004 50%, #060302 100%)); }
+.provisionImg3 { background-image: var(--slot-4, radial-gradient(ellipse 60% 65% at 50% 45%, #2a3018 0%, #101408 50%, #040504 100%)); }
+.provisionTitle {
+  font-family: var(--font-josefin);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+.provisionBody {
+  font-family: var(--font-crimson);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: rgba(28,20,10,0.55);
+  margin: 0;
+}
+
+/* ── Menu ───────────────────────────────────────────────────── */
+.menu {
+  padding: 4rem 2.5rem;
+  border-bottom: 1px solid rgba(28,20,10,0.1);
+}
+.menuHeader {
+  margin-bottom: 2rem;
+}
+.menuTitle {
+  font-family: var(--font-josefin);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+.menuSub {
+  font-family: var(--font-crimson);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: rgba(28,20,10,0.4);
+}
+.menuRule { height: 1px; background: rgba(28,20,10,0.1); margin-bottom: 0; }
+.menuColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 3rem;
+}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(28,20,10,0.07);
+  gap: 1rem;
+}
+.menuItemName { font-family: var(--font-josefin); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.03em; }
+.menuItemPrice { font-family: var(--font-josefin); font-size: 0.625rem; color: var(--accent); white-space: nowrap; }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  background: #1C140A;
+  color: #FAF5EC;
+  padding: 2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footerName {
+  font-family: var(--font-josefin);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.footerRight {
+  font-family: var(--font-josefin);
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.35;
+  text-align: right;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.25rem 1.5rem; }
+  .hero { grid-template-columns: 1fr; }
+  .heroText { padding: 2.5rem 1.5rem; border-right: none; }
+  .heroImage { min-height: 55vw; order: -1; }
+  .provisions { padding: 2.5rem 1.5rem; }
+  .provisionsGrid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .menu { padding: 2.5rem 1.5rem; }
+  .menuColumns { grid-template-columns: 1fr; gap: 0; }
+  .footer { padding: 1.5rem 1.5rem; }
+  .footerRight { text-align: left; }
+}

@@ -1,0 +1,161 @@
+/* Billboard — The name fills the screen. Hot yellow, unmissable. */
+
+.page {
+  background: #F7F200;
+  color: #0A0A0A;
+  overflow-x: clip;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  border-bottom: 2px solid #0A0A0A;
+}
+.navLeft {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+.navCta {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  background: #0A0A0A;
+  color: #F7F200;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: opacity 0.15s;
+}
+.navCta:hover { opacity: 0.8; }
+
+.marqueeHero {
+  min-height: calc(100svh - 57px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 2px solid #0A0A0A;
+  position: relative;
+}
+.heroName {
+  font-family: var(--font-display);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(5rem, 25vw, 20rem));
+  font-weight: 400;
+  line-height: 0.85;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+.heroSub {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-top: 2rem;
+}
+.heroDot { color: #0A0A0A; margin: 0 0.5em; opacity: 0.4; }
+
+.infoBar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 2px solid #0A0A0A;
+}
+.infoBarItem {
+  padding: 1.5rem 2rem;
+  border-right: 2px solid #0A0A0A;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.infoBarItem:last-child { border-right: none; }
+.infoBarLabel {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+.infoBarValue {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.menu {
+  background: #0A0A0A;
+  color: #F7F200;
+  padding: 3.5rem 2.5rem;
+}
+.menuTitle {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  opacity: 0.4;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.menuRule { height: 1px; background: rgba(247,242,0,0.15); margin-bottom: 0; }
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(247,242,0,0.08);
+  gap: 1rem;
+}
+.menuItemName {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.menuItemPrice {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0.6;
+}
+
+.footer {
+  border-top: 2px solid #0A0A0A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #F7F200;
+}
+.footerName {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.footerRight {
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.35;
+}
+
+@media (max-width: 640px) {
+  .infoBar { grid-template-columns: 1fr 1fr; }
+  .infoBarItem:nth-child(2) { border-right: none; }
+  .infoBarItem:nth-child(3) { border-top: 2px solid #0A0A0A; }
+  .infoBarItem:nth-child(4) { border-top: 2px solid #0A0A0A; border-right: none; }
+  .nav { padding: 1rem 1.5rem; }
+  .menu { padding: 2.5rem 1.5rem; }
+  .footer { padding: 1rem 1.5rem; }
+}

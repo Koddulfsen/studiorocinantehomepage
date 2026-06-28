@@ -1,0 +1,228 @@
+/* Roll — Polaroid grid, warm cream, film grain. Phone photos become an aesthetic. */
+
+.page {
+  background: #F2EBE0;
+  color: #1A1208;
+  --accent: #C9843A;
+  overflow-x: clip;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-bottom: 1px solid rgba(26,18,8,0.1);
+}
+.navName {
+  font-family: var(--font-cormorant);
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+.navLinks {
+  display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;
+}
+.navLinks a {
+  font-family: var(--font-josefin);
+  font-size: 0.625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLinks a:hover { color: #1A1208; }
+
+/* ── Hero polaroid ──────────────────────────────────────────── */
+.hero {
+  padding: 3rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: end;
+  border-bottom: 1px solid rgba(26,18,8,0.08);
+  min-height: calc(100svh - 65px);
+}
+.heroLeft {}
+.heroPolaroid {
+  background: #fff;
+  padding: 1rem 1rem 3rem;
+  box-shadow: 2px 4px 20px rgba(26,18,8,0.12);
+  transform: rotate(-1.5deg);
+}
+.heroPolaroidImg {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background-image: var(--slot-1, radial-gradient(ellipse 60% 65% at 50% 45%, #4a2808 0%, #1e0c04 50%, #060302 100%));
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+.heroPolaroidCaption {
+  font-family: var(--font-cormorant);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: rgba(26,18,8,0.5);
+  text-align: center;
+  padding-top: 0.75rem;
+}
+.heroRight {
+  padding-bottom: 1rem;
+}
+.heroLabel {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.heroName {
+  font-family: var(--font-cormorant);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(3.5rem, 7vw, 6rem));
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.5rem;
+}
+.heroTagline {
+  font-family: var(--font-cormorant);
+  font-size: clamp(1rem, 1.75vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(26,18,8,0.55);
+  max-width: 32ch;
+  margin: 0 0 2rem;
+}
+.heroCta {
+  display: inline-block;
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.65rem 1.5rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.heroCta:hover { background: var(--accent); color: #F2EBE0; }
+
+/* ── Photo grid ─────────────────────────────────────────────── */
+.grid {
+  padding: 3rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(26,18,8,0.08);
+}
+.gridLabel {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  grid-column: 1 / -1;
+  margin-bottom: 0.5rem;
+}
+.polaroid {
+  background: #fff;
+  padding: 0.75rem 0.75rem 2.5rem;
+  box-shadow: 1px 3px 12px rgba(26,18,8,0.1);
+}
+.polaroid:nth-child(3) { transform: rotate(1.2deg); }
+.polaroid:nth-child(4) { transform: rotate(-0.8deg); }
+.polaroid:nth-child(5) { transform: rotate(1.8deg); }
+.polaroidImg {
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+}
+.polaroidImg.food1 { background-image: var(--slot-2, radial-gradient(ellipse 60% 65% at 50% 50%, #4a2808 0%, #1e0c04 50%, #060302 100%)); background-size: cover; background-position: center; }
+.polaroidImg.food2 { background-image: var(--slot-3, radial-gradient(ellipse 60% 65% at 50% 50%, #2a3018 0%, #101408 50%, #040504 100%)); background-size: cover; background-position: center; }
+.polaroidImg.food3 { background-image: var(--slot-4, radial-gradient(ellipse 60% 65% at 50% 50%, #3d1a06 0%, #150803 50%, #020202 100%)); background-size: cover; background-position: center; }
+.polaroidCaption {
+  font-family: var(--font-cormorant);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: rgba(26,18,8,0.45);
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+/* ── Menu ───────────────────────────────────────────────────── */
+.menu {
+  padding: 3.5rem 2.5rem;
+  border-bottom: 1px solid rgba(26,18,8,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 4rem;
+  max-width: 800px;
+}
+.menuLabel {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
+}
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(26,18,8,0.07);
+  gap: 1rem;
+}
+.menuItemName {
+  font-family: var(--font-cormorant);
+  font-size: 1.0625rem;
+  font-weight: 400;
+}
+.menuItemPrice {
+  font-family: var(--font-josefin);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  padding: 2.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footerName {
+  font-family: var(--font-cormorant);
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(26,18,8,0.45);
+}
+.footerRight {
+  font-family: var(--font-josefin);
+  font-size: 0.5rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(26,18,8,0.3);
+}
+
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .heroPolaroid { transform: none; }
+  .grid { grid-template-columns: 1fr 1fr; padding: 2rem 1.5rem; }
+  .menu { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; }
+  .nav { padding: 1.25rem 1.5rem; }
+  .hero { padding: 2rem 1.5rem; }
+  .footer { padding: 1.75rem 1.5rem; }
+}

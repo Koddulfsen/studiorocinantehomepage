@@ -1,0 +1,222 @@
+{
+  "food-noir-obsidian": {
+    "slot-1": {
+      "category": "dish",
+      "number": 1,
+      "stockNum": 10
+    },
+    "slot-2": {
+      "category": "dish",
+      "number": 2,
+      "stockNum": 4
+    },
+    "slot-3": {
+      "category": "dish",
+      "number": 3
+    },
+    "slot-4": {
+      "category": "dish",
+      "number": 4
+    },
+    "slot-5": {
+      "category": "dish",
+      "number": 5,
+      "stockNum": 6
+    }
+  },
+  "atmosphere-manor-salon": {
+    "slot-1": {
+      "category": "atmosphere",
+      "number": 1
+    },
+    "slot-2": {
+      "category": "atmosphere",
+      "number": 2,
+      "stockNum": 7
+    }
+  },
+  "story-market-pantry": {
+    "slot-1": {
+      "category": "bar",
+      "number": 1,
+      "stockNum": 1
+    },
+    "slot-2": {
+      "stockNum": 1,
+      "category": "detail",
+      "number": 1
+    },
+    "slot-3": {
+      "category": "detail",
+      "number": 1,
+      "stockNum": 3
+    },
+    "slot-4": {
+      "category": "dish",
+      "number": 1,
+      "stockNum": 4
+    }
+  },
+  "atmosphere-corner-chronicle": {
+    "slot-1": {
+      "category": "hero",
+      "number": 1,
+      "stockNum": 2
+    },
+    "slot-2": {
+      "category": "atmosphere",
+      "number": 2
+    }
+  },
+  "story-broadsheet-byline": {
+    "slot-1": {
+      "category": "people",
+      "number": 1,
+      "stockNum": 3
+    },
+    "slot-2": {
+      "category": "dish",
+      "number": 1,
+      "stockNum": 5
+    }
+  },
+  "bold-marquee-stamp": {
+    "slot-1": {
+      "category": "people",
+      "number": 1,
+      "stockNum": 2
+    },
+    "slot-2": {
+      "category": "dish",
+      "number": 1,
+      "stockNum": 5
+    },
+    "slot-3": {
+      "category": "detail",
+      "number": 2,
+      "stockNum": 1
+    }
+  },
+  "minimal-manor-linen": {
+    "slot-1": {
+      "category": "dish",
+      "number": 1,
+      "stockNum": 4
+    },
+    "slot-2": {
+      "category": "atmosphere",
+      "number": 1,
+      "stockNum": 2
+    }
+  },
+  "bold-marquee-signal": {
+    "slot-1": {
+      "category": "atmosphere",
+      "number": 1
+    },
+    "slot-2": {
+      "category": "facade",
+      "number": 1,
+      "stockNum": 2
+    }
+  },
+  "food-polaroid-roll": {
+    "slot-1": {
+      "category": "atmosphere",
+      "number": 1,
+      "stockNum": 7
+    },
+    "slot-2": {
+      "category": "dish",
+      "number": 1,
+      "stockNum": 4
+    },
+    "slot-3": {
+      "category": "dish",
+      "number": 2,
+      "stockNum": 8
+    },
+    "slot-4": {
+      "category": "dish",
+      "number": 3,
+      "stockNum": 9
+    }
+  },
+  "food-polaroid-contact": {
+    "slot-1": {
+      "category": "dish",
+      "number": 1
+    },
+    "slot-2": {
+      "category": "atmosphere",
+      "number": 1
+    },
+    "slot-3": {
+      "category": "detail",
+      "number": 2,
+      "stockNum": 7
+    },
+    "slot-4": {
+      "category": "detail",
+      "number": 1
+    }
+  },
+  "food-polaroid-candid": {
+    "slot-1": {
+      "category": "atmosphere",
+      "number": 1
+    },
+    "slot-2": {
+      "category": "dish",
+      "number": 1
+    },
+    "slot-3": {
+      "category": "detail",
+      "number": 2,
+      "stockNum": 7
+    },
+    "slot-4": {
+      "category": "detail",
+      "number": 1
+    }
+  },
+  "story-market-grove": {
+    "slot-1": {
+      "category": "atmosphere",
+      "number": 1
+    },
+    "slot-2": {
+      "category": "dish",
+      "number": 2,
+      "stockNum": 4
+    },
+    "slot-3": {
+      "category": "detail",
+      "number": 1,
+      "stockNum": 3
+    },
+    "slot-4": {
+      "category": "people",
+      "number": 1,
+      "stockNum": 4
+    }
+  },
+  "atmosphere-corner-block": {
+    "slot-1": {
+      "category": "atmosphere",
+      "number": 1
+    },
+    "slot-2": {
+      "category": "atmosphere",
+      "number": 2,
+      "stockNum": 7
+    }
+  },
+  "bold-neon-volt": {
+    "slot-1": {
+      "category": "facade",
+      "number": 1,
+      "stockNum": 2
+    }
+  }
+}

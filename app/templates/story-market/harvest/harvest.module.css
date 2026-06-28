@@ -1,0 +1,232 @@
+/* Harvest — Earthy orange/terracotta, farmer's market energy, artisanal warmth. */
+
+.page {
+  background: #F5EDD8;
+  color: #1E1208;
+  overflow-x: clip;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-bottom: 2px solid #1E1208;
+}
+.navName {
+  font-family: var(--font-josefin);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.navLinks {
+  display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0;
+}
+.navLinks a {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(30,18,8,0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.navLinks a:hover { color: #C45A1A; }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  padding: 4rem 2.5rem 3.5rem;
+  border-bottom: 2px solid #1E1208;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  min-height: calc(100svh - 65px);
+}
+.heroLeft {}
+.heroSeason {
+  display: inline-block;
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  background: #C45A1A;
+  color: #F5EDD8;
+  padding: 0.35rem 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.heroName {
+  font-family: var(--font-josefin);
+  text-transform: var(--hero-title-transform, none);
+  font-size: var(--hero-title-size, clamp(3rem, 8vw, 7rem));
+  font-weight: 700;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.5rem;
+}
+.heroTagline {
+  font-family: var(--font-crimson);
+  font-size: clamp(1rem, 1.75vw, 1.25rem);
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(30,18,8,0.6);
+  max-width: 38ch;
+  margin: 0;
+}
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.heroCard {
+  background: #C45A1A;
+  color: #F5EDD8;
+  padding: 1.75rem;
+}
+.heroCardLabel {
+  font-family: var(--font-josefin);
+  font-size: 0.5rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  opacity: 0.65;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.heroCardValue {
+  font-family: var(--font-josefin);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.heroCardSub {
+  background: rgba(30,18,8,0.08);
+  padding: 1.25rem 1.75rem;
+  font-family: var(--font-crimson);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(30,18,8,0.6);
+}
+
+/* ── Story ──────────────────────────────────────────────────── */
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 2px solid #1E1208;
+  border-bottom: 2px solid #1E1208;
+}
+.storyImage {
+  background-image: var(--slot-1, radial-gradient(ellipse 65% 60% at 50% 50%, #5a3010 0%, #2a1508 50%, #0a0503 100%));
+  background-size: cover;
+  background-position: center;
+  min-height: 440px;
+  border-right: 2px solid #1E1208;
+}
+.storyText {
+  padding: 3.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.storyLabel {
+  font-family: var(--font-josefin);
+  font-size: 0.5625rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #C45A1A;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.storyHeading {
+  font-family: var(--font-josefin);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+}
+.storyBody {
+  font-family: var(--font-crimson);
+  font-size: 1rem;
+  color: rgba(30,18,8,0.6);
+  line-height: 1.8;
+  max-width: 42ch;
+  margin: 0;
+}
+
+/* ── Menu ───────────────────────────────────────────────────── */
+.menu {
+  padding: 3.5rem 2.5rem;
+  border-bottom: 2px solid #1E1208;
+}
+.menuTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+.menuTitle {
+  font-family: var(--font-josefin);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.menuNote {
+  font-family: var(--font-crimson);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: rgba(30,18,8,0.45);
+}
+.menuRule { height: 2px; background: #1E1208; margin-bottom: 0; }
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(30,18,8,0.1);
+  gap: 1rem;
+}
+.menuItemLeft { display: flex; flex-direction: column; gap: 0.2rem; }
+.menuItemName { font-family: var(--font-josefin); font-size: 0.9375rem; font-weight: 600; letter-spacing: 0.02em; }
+.menuItemDesc { font-family: var(--font-crimson); font-size: 0.875rem; font-style: italic; color: rgba(30,18,8,0.45); }
+.menuItemPrice { font-family: var(--font-josefin); font-size: 0.625rem; color: #C45A1A; white-space: nowrap; font-weight: 700; letter-spacing: 0.05em; }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  background: #1E1208;
+  color: #F5EDD8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footerName {
+  font-family: var(--font-josefin);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.footerRight {
+  font-family: var(--font-josefin);
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.35;
+  text-align: right;
+  line-height: 2;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 1.25rem 1.5rem; }
+  .hero { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1.5rem; min-height: auto; }
+  .story { grid-template-columns: 1fr; }
+  .storyImage { min-height: 55vw; border-right: none; }
+  .storyText { padding: 2.5rem 1.5rem; }
+  .menu { padding: 2.5rem 1.5rem; }
+  .footer { padding: 1.5rem 1.5rem; }
+  .footerRight { text-align: left; }
+}
