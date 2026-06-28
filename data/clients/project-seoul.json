@@ -13,6 +13,35 @@
         "slot-2": "/clients/project-seoul/icecream.png",
         "slot-3": "/clients/project-seoul/logo.png",
         "slot-4": "/clients/project-seoul/cashier.png"
+      },
+      "copy": {
+        "tagline": "Korean café. Bingsu, matcha, good vibes.",
+        "body": "Project Seoul brings the café culture of Seoul to Toronto — shaved milk ice piled with toppings, ceremonial matcha pulled properly, and a space that feels like somewhere you actually want to be.",
+        "cta": "Come In",
+        "eyebrow": "KOREAN CAFÉ · TORONTO",
+        "label": "WHAT WE MAKE",
+        "label2": "THE MENU",
+        "sections": [
+          { "title": "Bingsu", "body": "Shaved milk ice, lighter than you expect and loaded with toppings. Mango, strawberry, matcha, red bean — rotated with the season. Made to order every time." },
+          { "title": "Matcha & Drinks", "body": "Ceremonial grade matcha as a latte or over ice. Dalgona whipped to order, yuzu lemonade house-made daily. Korean favourites alongside your usual espresso." },
+          { "title": "Bites", "body": "Croffles pressed golden on the iron, tteok soft and freshly made, sikhye chilled and sweet. Small things done well, the Seoul way." }
+        ],
+        "menuItems": [
+          { "name": "Bingsu", "desc": "shaved milk ice, seasonal toppings", "price": "$14" },
+          { "name": "Croffle", "desc": "croissant waffle, honey butter", "price": "$8" },
+          { "name": "Matcha Latte", "desc": "ceremonial grade, oat or whole", "price": "$7" },
+          { "name": "Iced Americano", "desc": "double shot", "price": "$5" },
+          { "name": "Dalgona Coffee", "desc": "whipped, cold milk", "price": "$7" },
+          { "name": "Tteok", "desc": "soft rice cake, red bean or sesame", "price": "$5" },
+          { "name": "Yuzu Lemonade", "desc": "house-made, sparkling", "price": "$6" },
+          { "name": "Sikhye", "desc": "sweet rice punch, chilled", "price": "$5" }
+        ],
+        "slotCaptions": {
+          "slot-1": "the room",
+          "slot-2": "bingsu season",
+          "slot-3": "project seoul",
+          "slot-4": "at the counter"
+        }
       }
     },
     {
