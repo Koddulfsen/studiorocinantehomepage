@@ -86,7 +86,7 @@
       "fontPreset": "studio",
       "radius": "sharp",
       "accent": "#C4877A",
-      "titleSize": 3,
+      "titleSize": 0,
       "titleTransform": "uppercase",
       "slots": {
         "slot-1": "/clients/shy-coffee-co/cozy%20indoor%20seating%20coffee%20and%20pastries.png",
@@ -182,19 +182,56 @@
         "label": "WHAT WE MAKE",
         "label2": "THE MENU",
         "sections": [
-          { "title": "Coffee", "body": "Espresso drinks done properly, plus a few signatures. The vanilla rose is a regular. Nothing sits on a warmer." },
-          { "title": "Matcha", "body": "Ceremonial grade, served as a latte or straight. The kind that actually tastes like matcha." },
-          { "title": "Pastries", "body": "Croissants and seasonal bakes, in fresh each morning. Best before noon." }
+          {
+            "title": "Coffee",
+            "body": "Espresso drinks done properly, plus a few signatures. The vanilla rose is a regular. Nothing sits on a warmer."
+          },
+          {
+            "title": "Matcha",
+            "body": "Ceremonial grade, served as a latte or straight. The kind that actually tastes like matcha."
+          },
+          {
+            "title": "Pastries",
+            "body": "Croissants and seasonal bakes, in fresh each morning. Best before noon."
+          }
         ],
         "menuItems": [
-          { "name": "Espresso", "price": "$4" },
-          { "name": "Cortado", "price": "$5" },
-          { "name": "Vanilla Rose Latte", "desc": "house signature", "price": "$7" },
-          { "name": "Matcha Latte", "desc": "ceremonial grade", "price": "$7" },
-          { "name": "Iced Americano", "price": "$5.50" },
-          { "name": "Drip Coffee", "desc": "single origin", "price": "$4" },
-          { "name": "Croissant", "price": "$5" },
-          { "name": "Seasonal Pastry", "desc": "ask us", "price": "$5" }
+          {
+            "name": "Espresso",
+            "price": "$4"
+          },
+          {
+            "name": "Cortado",
+            "price": "$5"
+          },
+          {
+            "name": "Vanilla Rose Latte",
+            "desc": "house signature",
+            "price": "$7"
+          },
+          {
+            "name": "Matcha Latte",
+            "desc": "ceremonial grade",
+            "price": "$7"
+          },
+          {
+            "name": "Iced Americano",
+            "price": "$5.50"
+          },
+          {
+            "name": "Drip Coffee",
+            "desc": "single origin",
+            "price": "$4"
+          },
+          {
+            "name": "Croissant",
+            "price": "$5"
+          },
+          {
+            "name": "Seasonal Pastry",
+            "desc": "ask us",
+            "price": "$5"
+          }
         ],
         "slotCaptions": {
           "slot-1": "vanilla rose",
