@@ -180,7 +180,7 @@
       "fontPreset": "modern",
       "radius": "sharp",
       "accent": "#C4877A",
-      "titleSize": 50,
+      "titleSize": 0,
       "titleTransform": "none",
       "slots": {
         "slot-1": "/clients/mochi-mochi-cafe/seating.png",
@@ -331,10 +331,10 @@
     {
       "version": 20,
       "templateId": "story-market-pantry",
-      "fontPreset": "hana",
+      "fontPreset": "harvest",
       "radius": "sharp",
       "accent": "#C4877A",
-      "titleSize": 50,
+      "titleSize": 0,
       "titleTransform": "none",
       "slots": {
         "slot-1": "/clients/mochi-mochi-cafe/table.png",
@@ -350,9 +350,99 @@
         "label": "WHAT WE DO",
         "label2": "WHAT'S GOOD",
         "sections": [
-          { "title": "Mochi", "body": "Hand-shaped every morning in small batches. Red bean, matcha cream, black sesame, and whatever's seasonal. They go fast — come early if you have a favourite." },
-          { "title": "Drinks", "body": "Matcha and hojicha lattes made with quality leaves, plus drip coffee and a rotating house special. Everything is made to sit and savour, not to grab and go." },
-          { "title": "The Space", "body": "A small, unhurried room with good light and a table worth lingering at. We keep it simple so the food can speak. You're welcome to stay as long as you like." }
+          {
+            "title": "Mochi",
+            "body": "Hand-shaped every morning in small batches. Red bean, matcha cream, black sesame, and whatever's seasonal. They go fast — come early if you have a favourite."
+          },
+          {
+            "title": "Drinks",
+            "body": "Matcha and hojicha lattes made with quality leaves, plus drip coffee and a rotating house special. Everything is made to sit and savour, not to grab and go."
+          },
+          {
+            "title": "The Space",
+            "body": "A small, unhurried room with good light and a table worth lingering at. We keep it simple so the food can speak. You're welcome to stay as long as you like."
+          }
+        ],
+        "menuItems": [
+          {
+            "name": "Mochi — Red Bean",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Matcha Cream",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Black Sesame",
+            "price": "$4"
+          },
+          {
+            "name": "Mochi — Seasonal",
+            "price": "$5"
+          },
+          {
+            "name": "Matcha Latte",
+            "desc": "ceremonial grade, oat or whole",
+            "price": "$7"
+          },
+          {
+            "name": "Hojicha Latte",
+            "desc": "warm or iced",
+            "price": "$7"
+          },
+          {
+            "name": "Drip Coffee",
+            "desc": "single origin, filter",
+            "price": "$3.50"
+          },
+          {
+            "name": "House Special",
+            "desc": "ask us what's on today",
+            "price": "$6"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "a table for you",
+          "slot-2": "this morning's batch",
+          "slot-3": "come sit",
+          "slot-4": "the hands behind it"
+        }
+      }
+    },
+    {
+      "version": 21,
+      "templateId": "story-market-grove",
+      "fontPreset": "classic",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 0,
+      "titleTransform": "none",
+      "slots": {
+        "slot-1": "/clients/mochi-mochi-cafe/buns2.png",
+        "slot-2": "/clients/mochi-mochi-cafe/seating.png",
+        "slot-3": "/clients/mochi-mochi-cafe/table.png",
+        "slot-4": "/clients/mochi-mochi-cafe/owner.png"
+      },
+      "copy": {
+        "tagline": "Handmade mochi, a corgi, and good coffee.",
+        "body": "Mochi Mochi is a snug little café where every mochi is shaped by hand each morning and the house corgi is always on duty.",
+        "cta": "Come Say Hi",
+        "eyebrow": "MOCHI CAFÉ · TORONTO",
+        "label": "WHAT WE MAKE",
+        "label2": "WHAT'S ON",
+        "sections": [
+          {
+            "title": "Mochi",
+            "body": "Made fresh every morning in small batches — red bean, matcha cream, black sesame, and whatever's seasonal. Soft, chewy, and gone by afternoon. Come early if you have a favourite."
+          },
+          {
+            "title": "Drinks",
+            "body": "Matcha and hojicha lattes made with quality leaves, drip coffee brewed to order, and a rotating house special. Everything's made to sit and savour — no rush here."
+          },
+          {
+            "title": "The Vibe",
+            "body": "A small room, good light, and a corgi who takes his greeter duties very seriously. We keep it cozy and unhurried. You're welcome to stay as long as you like."
+          }
         ],
         "menuItems": [
           { "name": "Mochi — Red Bean", "price": "$4" },
@@ -365,9 +455,9 @@
           { "name": "House Special", "desc": "ask us what's on today", "price": "$6" }
         ],
         "slotCaptions": {
-          "slot-1": "a table for you",
-          "slot-2": "this morning's batch",
-          "slot-3": "come sit",
+          "slot-1": "fresh from this morning",
+          "slot-2": "pull up a chair",
+          "slot-3": "a table worth lingering at",
           "slot-4": "the hands behind it"
         }
       }
