@@ -2,26 +2,206 @@
   "templates": [
     {
       "version": 1,
-      "templateId": "minimal-mochi-hana",
-      "fontPreset": "hana",
+      "templateId": "minimal-manor-linen",
+      "fontPreset": "studio",
       "radius": "sharp",
       "accent": "#C4877A",
-      "titleSize": 50,
-      "titleTransform": "none",
-      "slots": {}
+      "titleSize": 10,
+      "titleWeight": 500,
+      "titleTransform": "uppercase",
+      "slots": {
+        "slot-1": "/clients/shy-coffee-co/vanilla%20rose%20latte.png",
+        "slot-2": "/clients/shy-coffee-co/entrance.png"
+      },
+      "copy": {
+        "tagline": "A quiet corner. A beautiful cup.",
+        "body": "Shy Coffee Co. is a café built for people who appreciate the details — the right light, a considered menu, and a seat outside when the weather allows. Come in unhurried.",
+        "cta": "Take a Seat",
+        "eyebrow": "CAFÉ · TORONTO",
+        "label": "WHAT WE SERVE",
+        "label2": "THE MENU",
+        "sections": [
+          {
+            "title": "Espresso & Lattes",
+            "body": "House espresso pulled to order, paired with steamed milk and a handful of seasonal signatures. The vanilla rose latte is the one people come back for."
+          },
+          {
+            "title": "The Patio",
+            "body": "A proper outdoor seat, not an afterthought. The kind of place to open a book, linger over a second coffee, or just watch the street. Open when the weather agrees."
+          },
+          {
+            "title": "Bites",
+            "body": "A short food menu to complement the drinks — pastries in the morning, light bites through the afternoon. Everything chosen to pair well with something in a cup."
+          }
+        ],
+        "menuItems": [
+          {
+            "name": "Espresso",
+            "price": "$4"
+          },
+          {
+            "name": "Cortado",
+            "price": "$5"
+          },
+          {
+            "name": "Vanilla Rose Latte",
+            "desc": "house signature, oat or whole",
+            "price": "$7"
+          },
+          {
+            "name": "Matcha Latte",
+            "desc": "ceremonial grade",
+            "price": "$7"
+          },
+          {
+            "name": "Iced Americano",
+            "desc": "double shot, filtered water",
+            "price": "$5.50"
+          },
+          {
+            "name": "Drip Coffee",
+            "desc": "single origin, rotating",
+            "price": "$4"
+          },
+          {
+            "name": "Croissant",
+            "desc": "butter, plain or almond",
+            "price": "$5"
+          },
+          {
+            "name": "Seasonal Pastry",
+            "desc": "ask us what's in today",
+            "price": "$5"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "the vanilla rose",
+          "slot-2": "come find us"
+        }
+      }
     },
     {
       "version": 2,
-      "templateId": "minimal-mochi-hana",
-      "fontPreset": "hana",
+      "templateId": "bold-marquee-stamp",
+      "fontPreset": "studio",
       "radius": "sharp",
       "accent": "#C4877A",
-      "titleSize": 50,
+      "titleSize": 3,
+      "titleTransform": "uppercase",
+      "slots": {
+        "slot-1": "/clients/shy-coffee-co/cozy%20indoor%20seating%20coffee%20and%20pastries.png",
+        "slot-2": "/clients/shy-coffee-co/pastries.png",
+        "slot-3": "/clients/shy-coffee-co/vanilla%20rose%20latte.png"
+      },
+      "copy": {
+        "tagline": "Good coffee. Nice light. Sit outside.",
+        "body": "Shy Coffee Co. does espresso, pastries, and a patio worth sitting on. The vanilla rose latte is a regular order. Come when you have time to stay.",
+        "cta": "Come In",
+        "eyebrow": "CAFÉ · TORONTO",
+        "label": "WHAT'S ON",
+        "label2": "Coffee · Pastry",
+        "sections": [
+          {
+            "title": "Coffee",
+            "body": "Espresso-based drinks and a few signatures worth trying. The vanilla rose is the one. Everything made to order, nothing sitting on a warmer."
+          },
+          {
+            "title": "Pastries",
+            "body": "Croissants, seasonal bakes, whatever's good that morning. Small menu, rotates often. Best early."
+          },
+          {
+            "title": "The Patio",
+            "body": "Outdoor seating when the weather holds. A proper place to sit, not folding chairs on a sidewalk. Bring a book or don't."
+          }
+        ],
+        "menuItems": [
+          {
+            "name": "Espresso",
+            "price": "$4"
+          },
+          {
+            "name": "Cortado",
+            "price": "$5"
+          },
+          {
+            "name": "Vanilla Rose Latte",
+            "desc": "house signature",
+            "price": "$7"
+          },
+          {
+            "name": "Matcha Latte",
+            "desc": "ceremonial grade",
+            "price": "$7"
+          },
+          {
+            "name": "Iced Americano",
+            "price": "$5.50"
+          },
+          {
+            "name": "Drip Coffee",
+            "desc": "single origin",
+            "price": "$4"
+          },
+          {
+            "name": "Croissant",
+            "price": "$5"
+          },
+          {
+            "name": "Seasonal Pastry",
+            "desc": "ask us",
+            "price": "$5"
+          }
+        ],
+        "slotCaptions": {
+          "slot-1": "inside",
+          "slot-2": "from the case",
+          "slot-3": "the vanilla rose"
+        }
+      }
+    },
+    {
+      "version": 3,
+      "templateId": "food-polaroid-contact",
+      "fontPreset": "studio",
+      "radius": "sharp",
+      "accent": "#C4877A",
+      "titleSize": 0,
+      "titleWeight": 600,
       "titleTransform": "none",
       "slots": {
-        "slot-1": "/clients/shy-coffee-co/matcha.png",
-        "slot-2": "/clients/shy-coffee-co/entrance.png",
-        "slot-3": "/clients/shy-coffee-co/entrance.png"
+        "slot-1": "/clients/shy-coffee-co/vanilla%20rose%20latte.png",
+        "slot-2": "/clients/shy-coffee-co/matcha.png",
+        "slot-3": "/clients/shy-coffee-co/entrance.png",
+        "slot-4": "/clients/shy-coffee-co/pastries.png"
+      },
+      "copy": {
+        "tagline": "Espresso, matcha, pastries. Come sit.",
+        "body": "Shy Coffee Co. is a café in Toronto. Good drinks, fresh pastries, somewhere decent to be for an hour. The vanilla rose latte and the matcha are both worth it.",
+        "cta": "Come In",
+        "eyebrow": "CAFÉ · TORONTO",
+        "label": "WHAT WE MAKE",
+        "label2": "THE MENU",
+        "sections": [
+          { "title": "Coffee", "body": "Espresso drinks done properly, plus a few signatures. The vanilla rose is a regular. Nothing sits on a warmer." },
+          { "title": "Matcha", "body": "Ceremonial grade, served as a latte or straight. The kind that actually tastes like matcha." },
+          { "title": "Pastries", "body": "Croissants and seasonal bakes, in fresh each morning. Best before noon." }
+        ],
+        "menuItems": [
+          { "name": "Espresso", "price": "$4" },
+          { "name": "Cortado", "price": "$5" },
+          { "name": "Vanilla Rose Latte", "desc": "house signature", "price": "$7" },
+          { "name": "Matcha Latte", "desc": "ceremonial grade", "price": "$7" },
+          { "name": "Iced Americano", "price": "$5.50" },
+          { "name": "Drip Coffee", "desc": "single origin", "price": "$4" },
+          { "name": "Croissant", "price": "$5" },
+          { "name": "Seasonal Pastry", "desc": "ask us", "price": "$5" }
+        ],
+        "slotCaptions": {
+          "slot-1": "vanilla rose",
+          "slot-2": "matcha",
+          "slot-3": "the entrance",
+          "slot-4": "from the case"
+        }
       }
     }
   ]
