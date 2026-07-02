@@ -29,7 +29,8 @@ const packages = [
       "Custom website designed & built",
       "Domain & hosting included",
       "Fast, mobile-friendly & always online",
-      "Yours after 12 months",
+      "Free content updates anytime",
+      "Leased monthly — fully yours after 12 months",
     ],
   },
   {
