@@ -65,8 +65,14 @@ export default function Services() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ packageId: selected }),
       });
-      const { url } = await res.json();
-      if (url) window.location.href = url;
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert("Something went wrong. Please email us at hello@studiorocinante.com");
+      }
+    } catch {
+      alert("Something went wrong. Please email us at hello@studiorocinante.com");
     } finally {
       setLoading(false);
     }
@@ -118,7 +124,7 @@ export default function Services() {
                   </div>
                 <button
                   onClick={() => setSelected(isSelected ? null : pkg.id)}
-                  className={`flex flex-col gap-0 p-8 text-center items-center transition-all duration-150 border flex-1 ${
+                  className={`flex flex-col gap-0 p-8 text-center items-center transition-all duration-150 border rounded-2xl flex-1 ${
                     isSelected
                       ? "border-ink bg-paper-warm"
                       : pkg.save
@@ -235,7 +241,7 @@ export default function Services() {
           <button
             onClick={handleCheckout}
             disabled={loading}
-            className="bg-ink text-paper px-6 py-2.5 text-sm font-medium tracking-wide transition-colors hover:bg-ink-soft disabled:opacity-50"
+            className="bg-ink text-paper px-6 py-2.5 text-sm font-medium tracking-wide rounded-full transition-colors hover:bg-ink-soft disabled:opacity-50"
           >
             {loading ? "Loading..." : "Checkout →"}
           </button>
