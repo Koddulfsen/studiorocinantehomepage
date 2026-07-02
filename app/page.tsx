@@ -86,7 +86,6 @@ export default function Main() {
           <h2 className="text-center font-serif text-3xl font-semibold tracking-tight">
             What we do.
           </h2>
-          <p className="mt-3 text-center text-ink-soft">Three things. That's it.</p>
 
           <ul className="mt-10 grid grid-cols-1 divide-y divide-ink/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {services.map((s) => (

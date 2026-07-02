@@ -38,13 +38,13 @@ export const services: Service[] = [
     icon: "mappin",
     title: "Google Maps",
     hook: "Get found.",
-    description: "When someone searches nearby, you show up. We set up and manage your listing.",
+    description: "When someone searches nearby, you show up. We optimise and manage your listing.",
   },
   {
     icon: "globe",
     title: "Website & Hosting",
     hook: "Look the part.",
-    description: "A custom website, built by hand. Hosted and maintained — nothing to touch.",
+    description: "Built for your business, your vibe, your customers. Hosted and maintained — nothing to touch.",
   },
   {
     icon: "star",
