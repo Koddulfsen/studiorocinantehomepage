@@ -52,8 +52,25 @@ const packages = [
 
 export default function Services() {
   const [selected, setSelected] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const selectedPkg = packages.find((p) => p.id === selected);
+
+  async function handleCheckout() {
+    if (!selected) return;
+    setLoading(true);
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ packageId: selected }),
+      });
+      const { url } = await res.json();
+      if (url) window.location.href = url;
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <div className="paper-grain min-h-screen bg-paper text-ink">
@@ -215,12 +232,13 @@ export default function Services() {
               ${selectedPkg?.setup} setup · ${selectedPkg?.monthly}/mo
             </p>
           </div>
-          <a
-            href={`mailto:${studio.email}?subject=${encodeURIComponent(`${selectedPkg?.name ?? ""} — let's get started`)}`}
-            className="bg-ink text-paper px-6 py-2.5 text-sm font-medium tracking-wide transition-colors hover:bg-ink-soft"
+          <button
+            onClick={handleCheckout}
+            disabled={loading}
+            className="bg-ink text-paper px-6 py-2.5 text-sm font-medium tracking-wide transition-colors hover:bg-ink-soft disabled:opacity-50"
           >
-            Checkout →
-          </a>
+            {loading ? "Loading..." : "Checkout →"}
+          </button>
         </div>
       </div>
     </div>

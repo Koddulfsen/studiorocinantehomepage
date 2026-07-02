@@ -43,6 +43,8 @@ next-env.d.ts
 # local-only — dashboard, API routes, scrape data, scripts
 /leads/
 /app/dashboard/
-/app/api/
+/app/api/clients/
+/app/api/leads/
+/app/api/slots/
 /scripts/
 .claude/
