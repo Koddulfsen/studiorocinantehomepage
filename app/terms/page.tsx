@@ -20,11 +20,11 @@ const sections = [
   },
   {
     title: "What we need from you",
-    body: `To get started, we'll need access to your Google account (or we can create one for you), your business details, and any photos or branding you have. We'll reach out after you sign up.`,
+    body: `To get started, we'll need access to your existing Google Business Profile, your business details, and any photos or branding you have. We'll reach out after you sign up.`,
   },
   {
     title: "What we deliver",
-    body: `We aim to have your Google listing live within 5 business days of receiving your information. Websites typically take 2–3 weeks. Review cards are shipped within 7 business days.`,
+    body: `We aim to have your Google listing optimised within 5 business days of receiving your information. Websites typically take 2–3 weeks. Review cards are shipped within 7 business days.`,
   },
   {
     title: "Results",
