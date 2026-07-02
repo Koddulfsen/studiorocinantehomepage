@@ -9,51 +9,55 @@ export type IconName =
   | "compass"
   | "quill"
   | "spark"
-  | "chart";
+  | "chart"
+  | "star"
+  | "mappin";
 
 export const studio = {
   name: "Studio Rocinante",
   shortName: "Rocinante",
   location: "Toronto, Canada",
   email: "hello@studiorocinante.com",
-  taglinePrimary: "Software, hand-built.",
-  taglineAlt: "We build the things others tilt away from.",
-  // Short, plain-language descriptions of what the studio is.
+  taglinePrimary: "Your online presence, handled.",
+  taglineAlt: "We get local businesses found.",
   introShort:
-    "A Toronto software studio. We design and build websites, tools, and products — made with care, not stamped out of a template.",
+    "We build websites and manage Google listings for local businesses. You focus on the business — we handle the rest.",
   introLong:
-    "Studio Rocinante is a small software studio in Toronto. We make websites, custom tools, and products for businesses that want something built by hand and built to last. We start with a strong draft, refine it with you, and hand over something that's truly yours.",
+    "Studio Rocinante helps local businesses show up online. We set up and manage your Google listing, build your website, and make sure customers can find you. One point of contact, one monthly fee, everything handled.",
 };
 
 export type Service = {
   icon: IconName;
   title: string;
-  blurb: string;
+  hook: string;
+  description: string;
 };
 
 export const services: Service[] = [
   {
+    icon: "mappin",
+    title: "Google Maps",
+    hook: "Get found.",
+    description: "When someone searches nearby, you show up. We set up and manage your listing.",
+  },
+  {
     icon: "globe",
-    title: "Web Design & Development",
-    blurb: "Fast, modern websites tailored to your business.",
+    title: "Website & Hosting",
+    hook: "Look the part.",
+    description: "A custom website, built by hand. Hosted and maintained — nothing to touch.",
   },
   {
-    icon: "spark",
-    title: "AI Solutions",
-    blurb: "A second brain. Your own imagination sets the limits for what's possible.",
-  },
-  {
-    icon: "code",
-    title: "Custom Software",
-    blurb:
-      "A personal project or something to help run your daily operations smoothly? Let's bring your ideas to life.",
+    icon: "star",
+    title: "Review Cards",
+    hook: "Get chosen.",
+    description: "Printed cards delivered to your door. Customers scan, leave a review. More reviews, higher ranking.",
   },
 ];
 
 export type Work = {
   title: string;
   category: string;
-  blurb: string;
+  description: string;
   images: string[];
   tag?: string;
   imageFit?: "cover" | "contain";
@@ -62,79 +66,52 @@ export type Work = {
 export const work: Work[] = [
   {
     title: "Mama's Guesthouse Cafe",
-    category: "Web Design & Development",
-    blurb: "Humble guesthouse and cafe on Langkawi, Malaysia.",
-    images: [
-      "/projects/mamasguesthousecafe/cafe.png",
-      "/projects/mamasguesthousecafe/full page.png",
-      "/projects/mamasguesthousecafe/activites.png",
-    ],
+    category: "Website & Hosting",
+    description: "A beloved spot on Langkawi — just needed a home online.",
+    images: ["/projects/mamasguesthousecafe/full page.png"],
   },
   {
     title: "Homestay Pulau Tuba",
-    category: "Web Design & Development",
-    blurb: "A quiet island homestay group initiative. Website is designed for people to get a feel for the island before they arrive.",
+    category: "Website & Hosting · Google Maps",
+    description: "Remote island homestay. We got them a site, a Google listing, and on the map.",
     imageFit: "contain",
-    images: [
-      "/projects/homestaypulautuba/hero.png",
-      "/projects/homestaypulautuba/acommodation.png",
-      "/projects/homestaypulautuba/community.png",
-      "/projects/homestaypulautuba/activities.png",
-    ],
-  },
-  {
-    title: "Nutri",
-    category: "Custom Software · AI",
-    blurb: "A nutritional calculator powered by an intuitive AI chat to log foods.",
-    images: [
-      "/projects/nutri/full-screen.png",
-      "/projects/nutri/analysis.png",
-      "/projects/nutri/search-macros.png",
-    ],
-  },
-  {
-    title: "Trade Deck",
-    category: "Custom Software · Data Processing",
-    blurb: "Backtesting tool for custom strategies, ranking them through a multidimensional metric system.",
-    images: [
-      "/projects/tradedeck/backtestingdashboard.png",
-      "/projects/tradedeck/botdashboard.png",
-    ],
+    images: ["/projects/homestaypulautuba/community.png"],
   },
 ];
 
 export type Step = {
   n: string;
   title: string;
-  blurb: string;
+  description: string;
 };
 
 // Mirrors the studio's collaborative pitch ("here's a draft, let's refine it together").
 export const process: Step[] = [
   {
     n: "01",
-    title: "Sketch",
-    blurb:
-      "We start with a real draft using your own photos and content — so you react to something concrete, not a blank page.",
+    title: "We talk",
+    description:
+      "Tell us about your business. We handle the rest — no tech knowledge needed.",
   },
   {
     n: "02",
-    title: "Refine",
-    blurb:
-      "We collaborate and adjust together until it's exactly what you want. No mystery, no jargon, no surprises.",
+    title: "We set up",
+    description:
+      "Your Google listing, website, and directories — set up correctly and completely.",
   },
   {
     n: "03",
-    title: "Launch",
-    blurb:
-      "We build, host, and hand it over — live, fast, and fully yours to keep. We're here when you need a change.",
+    title: "You get found",
+    description:
+      "Customers find you on Google Maps and your website. We keep everything running.",
   },
 ];
 
 // Things the studio can stand behind — no fabricated metrics.
 export const promises: string[] = [
-  "Honest, fixed pricing",
-  "You own everything",
+  "No lock-in",
+  "Fixed monthly pricing",
+  "Cancel anytime",
 ];
 
 // The brand story — the windmill on the logo, the Quixote namesake.
@@ -148,21 +125,21 @@ export const about = {
   principles: [
     {
       title: "Made by hand",
-      blurb: "Every line considered — like the windmill drawn on our logo.",
+      description: "Every line considered — like the windmill drawn on our logo.",
     },
     {
       title: "Plain language",
-      blurb: "We tell you what we're doing and why, without the jargon.",
+      description: "We tell you what we're doing and why, without the jargon.",
     },
     {
       title: "Built to last",
-      blurb: "Fast, maintainable, and yours to keep. No lock-in.",
+      description: "Fast, maintainable, and yours to keep. No lock-in.",
     },
   ],
 };
 
 export const nav = [
-  { label: "Work", href: "#work" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -171,7 +148,7 @@ export type Template = {
   slug: string;
   label: string;
   philosophy: string;
-  blurb: string;
+  description: string;
 };
 
 // Four treatments of the same quest — each tells the hero's-journey arc its own way.
@@ -180,28 +157,28 @@ export const templates: Template[] = [
     slug: "trail",
     label: "The Trail",
     philosophy: "Cartographer's Map",
-    blurb:
+    description:
       "A hand-inked path you travel as you scroll — terrain and light shifting from a dawn village to a triumphant summit.",
   },
   {
     slug: "manuscript",
     label: "The Manuscript",
     philosophy: "Illuminated Storybook",
-    blurb:
+    description:
       "Chapters of an illuminated tale, the gold leaf deepening as the story climbs toward triumph.",
   },
   {
     slug: "main",
     label: "The Main",
     philosophy: "Pen-and-Ink Poster",
-    blurb:
+    description:
       "High-contrast engraving that plunges into an inked night and breaks back out into the light.",
   },
   {
     slug: "horizon",
     label: "The Horizon",
     philosophy: "Atmospheric Minimal",
-    blurb:
+    description:
       "Restraint and big sky — the whole emotional arc carried by shifting light over a distant windmill.",
   },
 ];
@@ -248,7 +225,7 @@ export const journey: Beat[] = [
   {
     chapter: "VI",
     waypoint: "The Summit",
-    title: "Onward.",
+    title: "What's on your mind?",
     line: "The windmill turns — a friend now, not a foe. Let's begin yours.",
   },
 ];

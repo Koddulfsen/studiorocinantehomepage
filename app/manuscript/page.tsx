@@ -225,7 +225,7 @@ export default function Manuscript() {
                         </h3>
                       </div>
                       <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                        {s.blurb}
+                        {s.description}
                       </p>
                     </div>
                   </div>
@@ -274,7 +274,7 @@ export default function Manuscript() {
                         {w.title}
                       </h3>
                       <p className="mt-1 text-sm leading-relaxed text-ink-soft">
-                        {w.blurb}
+                        {w.description}
                       </p>
                       <p className="mt-2 font-hand text-lg text-gold-deep">
                         a giant, felled.
@@ -334,7 +334,7 @@ export default function Manuscript() {
                     </h3>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-paper/65">
-                    {step.blurb}
+                    {step.description}
                   </p>
                 </li>
               ))}
@@ -391,7 +391,7 @@ export default function Manuscript() {
                         {pr.title}
                       </h3>
                       <p className="mt-1 text-sm leading-relaxed text-paper/70">
-                        {pr.blurb}
+                        {pr.description}
                       </p>
                     </div>
                   </li>

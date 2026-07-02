@@ -208,7 +208,7 @@ export default function Trail() {
                         {s.title}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                        {s.blurb}
+                        {s.description}
                       </p>
                     </div>
                   </div>
@@ -259,7 +259,7 @@ export default function Trail() {
                     <h3 className="mt-1 font-serif text-2xl font-semibold">
                       {w.title}
                     </h3>
-                    <p className="mt-1 text-sm text-ink-soft">{w.blurb}</p>
+                    <p className="mt-1 text-sm text-ink-soft">{w.description}</p>
                     <p className="mt-2 font-hand text-lg text-gold-deep">
                       a giant, felled.
                     </p>
@@ -314,7 +314,7 @@ export default function Trail() {
                     </h3>
                   </div>
                   <p className="mt-3 text-sm leading-relaxed text-paper/65">
-                    {step.blurb}
+                    {step.description}
                   </p>
                 </li>
               ))}
@@ -365,7 +365,7 @@ export default function Trail() {
                       <h3 className="font-serif text-lg font-semibold text-gold-soft">
                         {pr.title}
                       </h3>
-                      <p className="mt-1 text-sm text-paper/70">{pr.blurb}</p>
+                      <p className="mt-1 text-sm text-paper/70">{pr.description}</p>
                     </div>
                   </li>
                 ))}

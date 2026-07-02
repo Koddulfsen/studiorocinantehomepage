@@ -99,7 +99,7 @@ export default function Main() {
                   <h3 className="mt-4 text-center font-serif text-xl font-semibold">
                     {s.title}
                   </h3>
-                  <p className="mt-2 text-center leading-relaxed text-ink-soft">{s.blurb}</p>
+                  <p className="mt-2 text-center leading-relaxed text-ink-soft">{s.description}</p>
                 </li>
               ))}
             </ul>
@@ -130,7 +130,7 @@ export default function Main() {
                   <h3 className="mt-2 font-serif text-2xl font-semibold">
                     {w.title}
                   </h3>
-                  <p className="mt-3 leading-relaxed text-ink-soft">{w.blurb}</p>
+                  <p className="mt-3 leading-relaxed text-ink-soft">{w.description}</p>
                 </div>
               </li>
             ))}

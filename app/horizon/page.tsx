@@ -202,7 +202,7 @@ export default function Horizon() {
                     <h3 className="font-serif text-xl font-semibold tracking-tight">
                       {s.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.blurb}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.description}</p>
                   </div>
                 </li>
               ))}
@@ -255,7 +255,7 @@ export default function Horizon() {
                     <h3 className="mt-1 font-serif text-2xl font-semibold tracking-tight">
                       {w.title}
                     </h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{w.blurb}</p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{w.description}</p>
                   </li>
               ))}
             </ul>
@@ -304,7 +304,7 @@ export default function Horizon() {
                   <h3 className="mt-2 font-serif text-lg font-semibold text-paper">
                     {step.title}
                   </h3>
-                  <p className="mt-2.5 text-sm leading-relaxed text-paper/60">{step.blurb}</p>
+                  <p className="mt-2.5 text-sm leading-relaxed text-paper/60">{step.description}</p>
                 </li>
               ))}
             </ol>
@@ -363,7 +363,7 @@ export default function Horizon() {
                     <h3 className="font-serif text-lg font-semibold text-gold-soft">
                       {pr.title}
                     </h3>
-                    <p className="mt-1 text-sm leading-relaxed text-paper/70">{pr.blurb}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-paper/70">{pr.description}</p>
                   </li>
                 ))}
               </ul>

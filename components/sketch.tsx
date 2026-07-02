@@ -40,9 +40,12 @@ const paths: Record<IconName, React.ReactNode> = {
   ),
   gears: (
     <>
-      <circle cx="11" cy="11" r="3" />
-      <path d="M11 4v2M11 16v2M4 11h2M16 11h2M6 6l1.5 1.5M14.5 14.5 16 16M16 6l-1.5 1.5M7.5 14.5 6 16" />
-      <circle cx="18" cy="18" r="2.4" />
+      {/* large gear */}
+      <circle cx="9" cy="9" r="3" />
+      <path d="M9 3v2M9 13v2M3 9h2M13 9h2M4.9 4.9l1.4 1.4M11.7 11.7l1.4 1.4M13.1 4.9l-1.4 1.4M6.3 11.7l-1.4 1.4" />
+      {/* small gear */}
+      <circle cx="16.5" cy="16.5" r="2" />
+      <path d="M16.5 13v1.5M16.5 18.5V20M13 16.5h1.5M18.5 16.5H20M14.4 14.4l1 1M18.6 18.6l1 1M18.6 14.4l-1 1M14.4 18.6l-1 1" />
     </>
   ),
   windmill: (
@@ -79,6 +82,15 @@ const paths: Record<IconName, React.ReactNode> = {
       <path d="M8.5 20v-5" />
       <path d="M13 20v-9" />
       <path d="M17.5 20v-4" />
+    </>
+  ),
+  star: (
+    <path d="M12 2l2.6 7.8h8.2l-6.6 4.8 2.5 7.7L12 17.8l-6.7 4.5 2.5-7.7L1.2 9.8h8.2L12 2Z" />
+  ),
+  mappin: (
+    <>
+      <path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7Z" />
+      <circle cx="12" cy="9" r="2.5" />
     </>
   ),
 };
