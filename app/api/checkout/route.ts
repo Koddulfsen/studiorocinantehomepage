@@ -31,17 +31,20 @@ export async function POST(req: NextRequest) {
 
   const origin = req.headers.get("origin") ?? "https://studiorocinante.com";
 
-  // add_invoice_items is valid in the Stripe REST API but missing from SDK v22 types
-  const params = {
+  const session = await stripe.checkout.sessions.create({
     mode: "subscription",
-    line_items: [{ price: pkg.priceId, quantity: 1 }],
-    add_invoice_items: [
+    line_items: [
+      {
+        price: pkg.priceId,
+        quantity: 1,
+      },
       {
         price_data: {
           currency: "cad",
           product_data: { name: `${pkg.name} — Setup Fee` },
           unit_amount: pkg.setupFee,
         },
+        quantity: 1,
       },
     ],
     subscription_data: {
@@ -49,9 +52,7 @@ export async function POST(req: NextRequest) {
     },
     success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/services`,
-  } as Parameters<typeof stripe.checkout.sessions.create>[0];
-
-  const session = await stripe.checkout.sessions.create(params);
+  });
 
   return NextResponse.json({ url: session.url });
 }
