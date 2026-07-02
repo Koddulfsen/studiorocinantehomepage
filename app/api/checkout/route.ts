@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       },
       {
         price_data: {
-          currency: "cad",
+          currency: "usd",
           product_data: { name: `${pkg.name} — Setup Fee` },
           unit_amount: pkg.setupFee,
         },

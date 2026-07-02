@@ -12,7 +12,7 @@ const sections = [
   },
   {
     title: "Pricing and payment",
-    body: `Each package has a one-time setup fee and a monthly subscription. Your card is charged the setup fee immediately at checkout, and then monthly on the same date going forward. All prices are in CAD unless otherwise stated.`,
+    body: `Each package has a one-time setup fee and a monthly subscription. Your card is charged the setup fee immediately at checkout, and then monthly on the same date going forward. All prices are in USD unless otherwise stated.`,
   },
   {
     title: "Cancellation",
