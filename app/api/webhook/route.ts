@@ -4,8 +4,11 @@ import { Resend } from "resend";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY!);
-
 const WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET!;
+
+// In-memory dedup — catches Stripe retries within the same Lambda instance.
+// Stripe retries happen within minutes; Lambda stays warm long enough to catch them.
+const processedEvents = new Set<string>();
 
 const PACKAGE_NAMES: Record<string, string> = {
   "price_1Toi1MDrg0mwRnvZJakNO5sB": "Google Maps Visibility",
@@ -27,32 +30,73 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
 
+  // Idempotency guard — skip already-processed events
+  if (processedEvents.has(event.id)) {
+    console.log(`Skipping duplicate event ${event.id}`);
+    return NextResponse.json({ received: true });
+  }
+  processedEvents.add(event.id);
+
   if (event.type === "checkout.session.completed") {
     const session = event.data.object as Stripe.Checkout.Session;
-
     const customerEmail = session.customer_details?.email;
-    if (!customerEmail) {
-      return NextResponse.json({ received: true });
-    }
 
-    // Get package name from line items
-    const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
-      expand: ["line_items"],
-    });
-    const priceId = fullSession.line_items?.data?.find(
-      (li) => li.price?.recurring
-    )?.price?.id;
-    const packageName = priceId ? (PACKAGE_NAMES[priceId] ?? "your package") : "your package";
+    if (customerEmail) {
+      let packageName = "your package";
+      try {
+        const fullSession = await stripe.checkout.sessions.retrieve(session.id, {
+          expand: ["line_items"],
+        });
+        const priceId = fullSession.line_items?.data?.find(
+          (li) => li.price?.recurring
+        )?.price?.id;
+        if (priceId && PACKAGE_NAMES[priceId]) packageName = PACKAGE_NAMES[priceId];
+      } catch {
+        console.error("Could not retrieve line items for session", session.id);
+      }
+
+      await resend.emails.send({
+        from: "Studio Rocinante <hello@studiorocinante.com>",
+        replyTo: "hello@studiorocinante.com",
+        to: customerEmail,
+        subject: "Studio Rocinante — Let's get started",
+        html: welcomeEmail(packageName),
+      });
+
+      console.log(`Welcome email sent to ${customerEmail} (${packageName})`);
+    }
+  }
+
+  if (event.type === "invoice.payment_failed") {
+    const invoice = event.data.object as Stripe.Invoice;
+    const customerEmail = invoice.customer_email;
+    const attemptCount = invoice.attempt_count;
+    const givingUp = !invoice.next_payment_attempt;
 
     await resend.emails.send({
       from: "Studio Rocinante <hello@studiorocinante.com>",
-      replyTo: "hello@studiorocinante.com",
-      to: customerEmail,
-      subject: "Studio Rocinante — Let's get started",
-      html: welcomeEmail(packageName),
+      to: "hello@studiorocinante.com",
+      subject: `Payment failed — ${customerEmail}`,
+      html: `<p>Payment attempt ${attemptCount} failed for <strong>${customerEmail}</strong>.</p>${givingUp ? "<p><strong>Stripe has stopped retrying. Manual follow-up needed.</strong></p>" : "<p>Stripe will retry automatically.</p>"}`,
     });
+  }
 
-    console.log(`Welcome email sent to ${customerEmail} (${packageName})`);
+  if (event.type === "customer.subscription.deleted") {
+    const sub = event.data.object as Stripe.Subscription;
+    const customerId = sub.customer as string;
+
+    let customerEmail = "unknown";
+    try {
+      const customer = await stripe.customers.retrieve(customerId) as Stripe.Customer;
+      customerEmail = customer.email ?? "unknown";
+    } catch { /* ignore */ }
+
+    await resend.emails.send({
+      from: "Studio Rocinante <hello@studiorocinante.com>",
+      to: "hello@studiorocinante.com",
+      subject: `Subscription cancelled — ${customerEmail}`,
+      html: `<p>Subscription cancelled for <strong>${customerEmail}</strong>.</p><p>Subscription ID: ${sub.id}</p>`,
+    });
   }
 
   return NextResponse.json({ received: true });
