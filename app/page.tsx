@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { WorkCardStack } from "@/components/WorkCardStack";
+import { GbpCalculator } from "@/components/gbp-calculator";
 import {
   studio,
   services,
@@ -105,6 +106,19 @@ export default function Main() {
             >
               See packages →
             </a>
+          </div>
+        </section>
+
+        {/* ── GBP Calculator ─────────────────────────────────────────────── */}
+        <section id="score" className="border-t border-ink/10 py-12 sm:py-24">
+          <h2 className="text-center font-serif text-3xl font-semibold tracking-tight">
+            How visible are you?
+          </h2>
+          <p className="mx-auto mt-4 max-w-md text-center text-sm leading-relaxed text-ink-soft">
+            Search your business below and get an instant score across 9 real ranking factors.
+          </p>
+          <div className="mt-10">
+            <GbpCalculator />
           </div>
         </section>
 
