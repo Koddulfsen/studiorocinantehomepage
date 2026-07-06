@@ -1,20 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { Resend } from "resend";
+import { PACKAGE_NAMES_BY_PRICE_ID } from "@/lib/packages";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 const resend = new Resend(process.env.RESEND_API_KEY!);
 const WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET!;
 
-// In-memory dedup — catches Stripe retries within the same Lambda instance.
-// Stripe retries happen within minutes; Lambda stays warm long enough to catch them.
+// Dedup relies on Resend's idempotencyKey (below), which is durable across
+// retries/instances — this in-memory set is just a fast-path short-circuit.
 const processedEvents = new Set<string>();
 
-const PACKAGE_NAMES: Record<string, string> = {
-  "price_1Toi1MDrg0mwRnvZJakNO5sB": "Google Maps Visibility",
-  "price_1Toi26Drg0mwRnvZc4Lo1Gkn": "Website & Hosting",
-  "price_1Toi2VDrg0mwRnvZxcTqzDp7": "Full Online Presence",
-};
+async function sendEmail(params: Parameters<typeof resend.emails.send>[0], idempotencyKey: string) {
+  try {
+    await resend.emails.send(params, { idempotencyKey });
+  } catch (err) {
+    // Don't let an email failure make us return non-200 to Stripe — that
+    // would trigger a full webhook retry rather than just an email retry.
+    console.error(`Failed to send email (idempotencyKey=${idempotencyKey}):`, err);
+  }
+}
 
 export async function POST(req: NextRequest) {
   const body = await req.text();
@@ -50,18 +55,21 @@ export async function POST(req: NextRequest) {
         const priceId = fullSession.line_items?.data?.find(
           (li) => li.price?.recurring
         )?.price?.id;
-        if (priceId && PACKAGE_NAMES[priceId]) packageName = PACKAGE_NAMES[priceId];
+        if (priceId && PACKAGE_NAMES_BY_PRICE_ID[priceId]) packageName = PACKAGE_NAMES_BY_PRICE_ID[priceId];
       } catch {
         console.error("Could not retrieve line items for session", session.id);
       }
 
-      await resend.emails.send({
-        from: "Studio Rocinante <hello@studiorocinante.com>",
-        replyTo: "hello@studiorocinante.com",
-        to: customerEmail,
-        subject: "Studio Rocinante — Let's get started",
-        html: welcomeEmail(packageName),
-      });
+      await sendEmail(
+        {
+          from: "Studio Rocinante <hello@studiorocinante.com>",
+          replyTo: "hello@studiorocinante.com",
+          to: customerEmail,
+          subject: "Studio Rocinante — Let's get started",
+          html: welcomeEmail(packageName),
+        },
+        `welcome-${event.id}`
+      );
 
       console.log(`Welcome email sent to ${customerEmail} (${packageName})`);
     }
@@ -73,12 +81,15 @@ export async function POST(req: NextRequest) {
     const attemptCount = invoice.attempt_count;
     const givingUp = !invoice.next_payment_attempt;
 
-    await resend.emails.send({
-      from: "Studio Rocinante <hello@studiorocinante.com>",
-      to: "hello@studiorocinante.com",
-      subject: `Payment failed — ${customerEmail}`,
-      html: `<p>Payment attempt ${attemptCount} failed for <strong>${customerEmail}</strong>.</p>${givingUp ? "<p><strong>Stripe has stopped retrying. Manual follow-up needed.</strong></p>" : "<p>Stripe will retry automatically.</p>"}`,
-    });
+    await sendEmail(
+      {
+        from: "Studio Rocinante <hello@studiorocinante.com>",
+        to: "hello@studiorocinante.com",
+        subject: `Payment failed — ${customerEmail}`,
+        html: `<p>Payment attempt ${attemptCount} failed for <strong>${customerEmail}</strong>.</p>${givingUp ? "<p><strong>Stripe has stopped retrying. Manual follow-up needed.</strong></p>" : "<p>Stripe will retry automatically.</p>"}`,
+      },
+      `payment-failed-${event.id}`
+    );
   }
 
   if (event.type === "customer.subscription.deleted") {
@@ -91,12 +102,15 @@ export async function POST(req: NextRequest) {
       customerEmail = customer.email ?? "unknown";
     } catch { /* ignore */ }
 
-    await resend.emails.send({
-      from: "Studio Rocinante <hello@studiorocinante.com>",
-      to: "hello@studiorocinante.com",
-      subject: `Subscription cancelled — ${customerEmail}`,
-      html: `<p>Subscription cancelled for <strong>${customerEmail}</strong>.</p><p>Subscription ID: ${sub.id}</p>`,
-    });
+    await sendEmail(
+      {
+        from: "Studio Rocinante <hello@studiorocinante.com>",
+        to: "hello@studiorocinante.com",
+        subject: `Subscription cancelled — ${customerEmail}`,
+        html: `<p>Subscription cancelled for <strong>${customerEmail}</strong>.</p><p>Subscription ID: ${sub.id}</p>`,
+      },
+      `subscription-deleted-${event.id}`
+    );
   }
 
   return NextResponse.json({ received: true });

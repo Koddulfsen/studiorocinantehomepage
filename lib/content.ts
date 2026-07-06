@@ -70,7 +70,7 @@ export const packages: Package[] = [
     monthly: 82,
     description: "Show up when people search nearby.",
     includes: [
-      "Right category & complete profile setup",
+      "Correct categorization & complete profile setup",
       "Consistent listing across Google, Yelp, TripAdvisor & more",
       "We monitor your listing and respond to every review",
       "Monthly report",

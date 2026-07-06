@@ -1,22 +1,8 @@
 import Stripe from "stripe";
 import { NextRequest, NextResponse } from "next/server";
+import { PACKAGES } from "@/lib/packages";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
-const PACKAGES: Record<string, { priceId: string; name: string }> = {
-  gbp: {
-    priceId: "price_1Toi1MDrg0mwRnvZJakNO5sB",
-    name: "Google Maps Visibility",
-  },
-  web: {
-    priceId: "price_1Toi26Drg0mwRnvZc4Lo1Gkn",
-    name: "Website & Hosting",
-  },
-  full: {
-    priceId: "price_1Toi2VDrg0mwRnvZxcTqzDp7",
-    name: "Full Online Presence",
-  },
-};
 
 export async function POST(req: NextRequest) {
   const { packageId } = await req.json();

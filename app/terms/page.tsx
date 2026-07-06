@@ -12,11 +12,11 @@ const sections = [
   },
   {
     title: "Pricing and payment",
-    body: `Each package has a one-time setup fee and a monthly subscription. Your card is charged the setup fee immediately at checkout, and then monthly on the same date going forward. All prices are in USD unless otherwise stated.`,
+    body: `Each package is a monthly subscription. Your card is charged at checkout, and then monthly on the same date going forward. All prices are in USD unless otherwise stated.`,
   },
   {
     title: "Cancellation",
-    body: `You can cancel anytime. No lock-in, no cancellation fees. When you cancel, your subscription stops at the end of the current billing period. Setup fees are non-refundable.`,
+    body: `You can cancel anytime. No lock-in, no cancellation fees. When you cancel, your subscription stops at the end of the current billing period.`,
   },
   {
     title: "What we need from you",
