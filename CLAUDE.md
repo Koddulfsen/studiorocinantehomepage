@@ -2,6 +2,10 @@
 
 # Studio Rocinante — Project Overview
 
+## ⚠️ This is the repo that pushes to GitHub
+
+This folder (`/home/kodd/studiorocinantehomepage`) is tracked in git and its `origin` remote points to `Koddulfsen/studiorocinantehomepage` on GitHub. There is a similarly-named but separate, untracked working folder at `/home/kodd/studiorocinante` — changes made there do NOT get pushed unless replicated here. Always double-check `pwd` and `git remote -v` before committing/pushing.
+
 ## What this is
 
 Studio Rocinante is a Toronto-based web design studio (Quixote = the human, Rocinante = the AI). The studio has two layers:

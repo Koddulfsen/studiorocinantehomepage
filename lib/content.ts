@@ -38,19 +38,69 @@ export const services: Service[] = [
     icon: "mappin",
     title: "Google Maps",
     hook: "Get found.",
-    description: "When someone searches nearby, you show up. We optimise and manage your listing.",
+    description: "We handle full GBP optimization: the right categories, complete profile details, and NAP-consistent citations across every directory.",
   },
   {
     icon: "globe",
     title: "Website & Hosting",
     hook: "Look the part.",
-    description: "Built for your business, your vibe, your customers. Hosted and maintained — nothing to touch.",
+    description: "Custom-built to feel like your business, and engineered underneath to load fast and back up your Google ranking. Not just a template with your logo on it.",
   },
   {
     icon: "star",
-    title: "Review Cards",
+    title: "Reviews & Trust",
     hook: "Get chosen.",
-    description: "Printed cards delivered to your door. Customers scan, leave a review. More reviews, higher ranking.",
+    description: "We keep the reviews coming in, keep you responding to every one, and keep fake ones from dragging your rating down.",
+  },
+];
+
+export type Package = {
+  id: string;
+  name: string;
+  monthly: number;
+  save?: number;
+  description: string;
+  includes: string[];
+};
+
+export const packages: Package[] = [
+  {
+    id: "gbp",
+    name: "Google Maps Visibility",
+    monthly: 82,
+    description: "Show up when people search nearby.",
+    includes: [
+      "Right category & complete profile setup",
+      "Consistent listing across Google, Yelp, TripAdvisor & more",
+      "We monitor your listing and respond to every review",
+      "Monthly report",
+    ],
+  },
+  {
+    id: "web",
+    name: "Website & Hosting",
+    monthly: 182,
+    description: "Custom branded website. Hosted, maintained.",
+    includes: [
+      "Custom-built website, designed around your business",
+      "Domain & hosting included",
+      "Fast-loading, mobile-friendly, built to rank",
+      "FAQ page Google's AI can pull from",
+      "Yours after 12 months, or buy out anytime",
+    ],
+  },
+  {
+    id: "full",
+    name: "Full Online Presence",
+    monthly: 228,
+    save: 432,
+    description: "Everything. One price.",
+    includes: [
+      "Everything in GBP Visibility",
+      "Everything in Website & Hosting",
+      "Same business info everywhere, boosting your Google Maps ranking",
+      "Custom cards to spark genuine reviews",
+    ],
   },
 ];
 
@@ -107,11 +157,30 @@ export const process: Step[] = [
   },
 ];
 
+export type Stat = {
+  value: string;
+  description: string;
+  source: string;
+};
+
+// Real, cited industry figures — not our own numbers, since we have no clients yet.
+export const keyStats: Stat[] = [
+  {
+    value: "97%",
+    description: "of customers read reviews before choosing a local business.",
+    source: "BrightLocal, 2026 Local Consumer Review Survey",
+  },
+  {
+    value: "7x",
+    description: "more clicks for businesses with a complete Google Business Profile.",
+    source: "Google Business Profile data",
+  },
+];
+
 // Things the studio can stand behind — no fabricated metrics.
 export const promises: string[] = [
   "No lock-in",
-  "Fixed monthly pricing",
-  "Cancel anytime",
+  "Fixed monthly price",
 ];
 
 // The brand story — the windmill on the logo, the Quixote namesake.

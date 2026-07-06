@@ -10,6 +10,11 @@
   --color-gold: #e0a30c; /* the logo's golden script */
   --color-gold-soft: #f0c64f;
   --color-gold-deep: #b9701a; /* the orange shadow on the logo type */
+  --color-lagoon: #2b6b68; /* dimmed tropical teal, used for the trust strip */
+
+  /* The two site-wide highlight colors — all accent/highlight usage should reference these two, nothing else. */
+  --color-accent-teal: #2b6b68;
+  --color-accent-coral: #b5566a;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;

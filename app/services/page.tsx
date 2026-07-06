@@ -1,54 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
-import { studio } from "@/lib/content";
-
-const packages = [
-  {
-    id: "gbp",
-    name: "Google Maps Visibility",
-    setup: 129,
-    monthly: 49,
-    description: "Show up when people search nearby.",
-    includes: [
-      "Google Maps profile set up & optimised",
-      "Listed on Google, Yelp, TripAdvisor, Facebook & more",
-      "Custom review incentive cards delivered to your business",
-      "Listing monitored & protected",
-      "Monthly report",
-    ],
-  },
-  {
-    id: "web",
-    name: "Website & Hosting",
-    setup: 299,
-    monthly: 99,
-    description: "Custom branded website. Hosted, maintained.",
-    includes: [
-      "Custom website designed & built",
-      "Domain & hosting included",
-      "Fast, mobile-friendly & always online",
-      "Free content updates anytime",
-      "Leased monthly — fully yours after 12 months",
-    ],
-  },
-  {
-    id: "full",
-    name: "Full Online Presence",
-    setup: 399,
-    monthly: 129,
-    save: 257,
-    description: "Everything. One price.",
-    includes: [
-      "Google Maps profile set up & optimised",
-      "Listed everywhere that matters",
-      "Custom website designed & built",
-      "Domain & hosting included",
-      "Review cards + monthly report",
-    ],
-  },
-];
+import { studio, packages } from "@/lib/content";
+import { SiteHeader } from "@/components/SiteHeader";
 
 export default function Services() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -81,18 +35,7 @@ export default function Services() {
   return (
     <div className="paper-grain min-h-screen bg-paper text-ink">
 
-      {/* Header */}
-      <header>
-        <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
-          <Link href="/" className="font-serif text-lg font-semibold tracking-tight">
-            Studio Rocinante
-          </Link>
-          <nav className="flex items-center gap-5 sm:gap-7">
-            <a href="/#work" className="text-sm text-ink-soft transition-colors hover:text-ink">Work</a>
-            <a href="/#contact" className="text-sm text-ink-soft transition-colors hover:text-ink">Contact</a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="mx-auto max-w-3xl px-6 pb-24">
 
@@ -103,28 +46,31 @@ export default function Services() {
             Your online presence,<br />handled.
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
-            We set everything up and keep it running. You focus on the business.
+            We set everything up and keep it running.
+            <br className="hidden min-[420px]:inline" /> You focus on the business.
           </p>
         </section>
 
         {/* Packages */}
         <section className="border-t border-ink/10 pt-12">
-          <div className="grid gap-6 sm:grid-cols-3 items-stretch">
+          <div className="grid gap-6 sm:grid-cols-3 sm:[grid-template-rows:repeat(9,auto)] items-stretch">
             {packages.map((pkg) => {
               const isSelected = selected === pkg.id;
-              const perDay = (pkg.monthly / 30).toFixed(2);
               return (
-                <div key={pkg.id} className="flex flex-col h-full">
+                <div
+                  key={pkg.id}
+                  className="grid justify-items-center h-full sm:row-span-9 sm:[grid-template-rows:subgrid]"
+                >
                   <div className="mb-2 h-5 flex items-center justify-center gap-2">
                     {pkg.save && (
                       <>
-                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold-deep">· Recommended ·</span>
+                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent-coral">· Recommended ·</span>
                       </>
                     )}
                   </div>
                 <button
                   onClick={() => setSelected(isSelected ? null : pkg.id)}
-                  className={`flex flex-col gap-0 p-8 text-center items-center transition-all duration-150 border rounded-2xl flex-1 ${
+                  className={`grid justify-items-center gap-y-5 px-6 py-8 text-center transition-all duration-150 border rounded-2xl w-full sm:row-span-8 sm:[grid-template-rows:subgrid] ${
                     isSelected
                       ? "border-ink bg-paper-warm"
                       : pkg.save
@@ -133,49 +79,58 @@ export default function Services() {
                   }`}
                 >
                   {/* Name */}
-                  <h2 className="font-serif text-xl font-semibold h-14 flex items-start justify-center text-center">{pkg.name}</h2>
+                  <h2 className="font-serif text-xl font-semibold flex items-start justify-center text-center">{pkg.name}</h2>
 
                   {/* Description */}
-                  <p className="text-xs leading-relaxed text-ink-soft/50 h-10 flex items-start justify-center">{pkg.description}</p>
+                  <p className="text-xs leading-relaxed text-ink-soft/50 flex items-start justify-center">{pkg.description}</p>
 
                   {/* Divider */}
-                  <div className="w-full border-t border-ink/10 my-5" />
+                  <div className="w-full border-t border-ink/10 self-center" />
 
                   {/* Price */}
-                  <div className="h-20 flex flex-col justify-center items-center">
-                    <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-ink-soft mb-1">${pkg.setup} setup</p>
+                  <div className="flex flex-col justify-center items-center">
+                    {pkg.save && (
+                      <span className="font-mono text-xs text-ink-soft/50 line-through">
+                        ${pkg.monthly + Math.round(pkg.save / 12)}/mo
+                      </span>
+                    )}
                     <div className="flex items-baseline gap-1">
                       <span className="font-serif text-4xl font-semibold">${pkg.monthly}</span>
                       <span className="text-sm text-ink-soft">/mo</span>
                     </div>
-                    <p className="font-mono text-[10px] text-ink-soft/60 mt-1">${perDay}/day</p>
                   </div>
 
                   {/* Divider */}
-                  <div className="w-full border-t border-ink/10 my-5" />
+                  <div className="w-full border-t border-ink/10 self-center" />
 
                   {/* Includes */}
                   <ul className="flex flex-col gap-3 text-left w-full">
                     {pkg.includes.map((item) => (
-                      <li key={item} className="flex gap-2.5 text-sm text-ink-soft">
-                        <span className="shrink-0 text-gold-deep mt-0.5">✓</span>
+                      <li
+                        key={item}
+                        className={`flex gap-2.5 text-sm text-ink-soft ${
+                          item === "Custom cards to spark genuine reviews" ? "font-semibold text-ink" : ""
+                        }`}
+                      >
+                        <span className="shrink-0 text-accent-coral mt-0.5">✓</span>
                         {item}
                       </li>
                     ))}
                   </ul>
 
                   {/* Save badge */}
-                  {pkg.save && (
-                    <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.2em] text-gold-deep">
-                      Save ${pkg.save}/year
-                    </p>
-                  )}
+                  <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.2em] text-accent-coral">
+                    {pkg.save ? `Save $${pkg.save}/year` : ""}
+                  </p>
 
                   {/* Selection dot */}
-                  <div className="mt-auto flex justify-center pt-6">
+                  <div className="flex flex-col items-center gap-2 justify-end pt-6">
                     <div className={`h-3 w-3 rounded-full border transition-all ${
                       isSelected ? "border-ink bg-ink" : "border-ink/30"
                     }`} />
+                    <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-soft">
+                      {isSelected ? "Selected" : "Select"}
+                    </p>
                   </div>
                 </button>
                 </div>
@@ -204,7 +159,19 @@ export default function Services() {
               },
               {
                 q: "What do you need from me?",
-                a: "Your business details and access to your Google account. Takes 10 minutes.",
+                a: "Your business details and access to your Google account.",
+              },
+              {
+                q: "I already have a Google listing / website — can you just take over from here?",
+                a: "Yes. We take over what's there, clean it up, and keep it running from wherever it currently stands.",
+              },
+              {
+                q: "What if I don't like the design?",
+                a: "You see a draft before anything goes live. Tell us what you like and what you don't, and we customize it to your liking.",
+              },
+              {
+                q: "Do you handle bad reviews too?",
+                a: "Yes. We respond to every review, good or bad, and step in fast if fake reviews show up.",
               },
             ].map(({ q, a }) => (
               <div key={q}>
@@ -235,7 +202,7 @@ export default function Services() {
           <div>
             <p className="font-serif text-base font-semibold">{selectedPkg?.name}</p>
             <p className="font-mono text-xs text-ink-soft mt-0.5">
-              ${selectedPkg?.setup} setup · ${selectedPkg?.monthly}/mo
+              ${selectedPkg?.monthly}/mo
             </p>
           </div>
           <button
