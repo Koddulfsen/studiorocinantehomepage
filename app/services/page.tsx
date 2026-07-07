@@ -70,12 +70,12 @@ export default function Services() {
                   </div>
                 <button
                   onClick={() => setSelected(isSelected ? null : pkg.id)}
-                  className={`grid justify-items-center gap-y-5 px-6 py-8 text-center transition-all duration-150 border rounded-2xl w-full sm:row-span-8 sm:[grid-template-rows:subgrid] ${
+                  className={`grid justify-items-center gap-y-5 px-6 py-8 text-center transition-all duration-150 rounded-2xl w-full sm:row-span-8 sm:[grid-template-rows:subgrid] ${
                     isSelected
-                      ? "border-ink bg-paper-warm"
+                      ? "border-2 border-ink bg-paper-warm"
                       : pkg.save
-                      ? "border-ink/15 bg-paper-warm/60 hover:border-ink/30"
-                      : "border-transparent hover:border-ink/20"
+                      ? "border border-ink/15 bg-paper-warm/60 hover:border-ink/30"
+                      : "border border-transparent hover:border-ink/20"
                   }`}
                 >
                   {/* Name */}
@@ -155,7 +155,7 @@ export default function Services() {
               },
               {
                 q: "How long until I see results?",
-                a: "Setup takes 1–2 weeks. Google ranking improves over the first 1–3 months.",
+                a: "Setup takes 1–2 weeks. Google ranking improves over the first 3–6 months.",
               },
               {
                 q: "What do you need from me?",
