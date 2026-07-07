@@ -65,11 +65,6 @@ export default async function SuccessPage({
           </p>
         )}
 
-        {/* Handwritten accent */}
-        <p className="mt-3 font-hand text-2xl text-gold-deep sm:text-3xl">
-          Consider it handled.
-        </p>
-
         <div className="my-8 h-px w-16 bg-ink/10" />
 
         {/* Body */}
