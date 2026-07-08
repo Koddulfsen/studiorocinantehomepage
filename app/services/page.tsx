@@ -159,7 +159,7 @@ export default function Services() {
               },
               {
                 q: "What do you need from me?",
-                a: "Your business details and manager access to your Google Business Profile — no passwords needed.",
+                a: "Your business details and manager access to your Google Business Profile, no passwords needed.",
               },
               {
                 q: "I already have a Google listing / website — can you just take over from here?",
