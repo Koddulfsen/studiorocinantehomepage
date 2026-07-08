@@ -72,8 +72,8 @@ export const packages: Package[] = [
     includes: [
       "Fully optimized Google Business Profile",
       "Best-fit categories for how customers search",
-      "Complete profile — hours, photos, menu & more",
-      "Consistent listing across Google, Yelp, TripAdvisor & more (NAP)",
+      "Full profile: hours, photos, menu & more",
+      "Consistent NAP across Google, Yelp, TripAdvisor & more",
       "Regular posts & fresh photos",
       "We respond to every review",
       "Protection against fake reviews & rogue edits",
@@ -104,7 +104,7 @@ export const packages: Package[] = [
     includes: [
       "Everything in Google Maps Visibility",
       "Everything in Website & Hosting",
-      "Same info everywhere — boosts your ranking",
+      "Same info everywhere, boosts your ranking",
       "Custom cards to spark genuine reviews",
     ],
   },
