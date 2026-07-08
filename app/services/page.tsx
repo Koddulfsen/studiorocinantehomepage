@@ -72,10 +72,10 @@ export default function Services() {
                   onClick={() => setSelected(isSelected ? null : pkg.id)}
                   className={`grid justify-items-center gap-y-5 px-6 py-8 text-center transition-all duration-150 rounded-2xl w-full sm:row-span-8 sm:[grid-template-rows:subgrid] ${
                     isSelected
-                      ? "border-2 border-ink bg-paper-warm"
+                      ? "ring-2 ring-ink bg-paper-warm"
                       : pkg.save
-                      ? "border border-ink/15 bg-paper-warm/60 hover:border-ink/30"
-                      : "border border-transparent hover:border-ink/20"
+                      ? "ring-1 ring-ink/15 bg-paper-warm/60 hover:ring-ink/30"
+                      : "hover:ring-1 hover:ring-ink/20"
                   }`}
                 >
                   {/* Name */}
